@@ -1,0 +1,9 @@
+c:\users\utilisateur\documents\visual studio 2013\Projects\ProjetCSWF\ProjetCSWF\bin\Debug\ProjetCSWF.exe.config
+c:\users\utilisateur\documents\visual studio 2013\Projects\ProjetCSWF\ProjetCSWF\bin\Debug\ProjetCSWF.exe
+c:\users\utilisateur\documents\visual studio 2013\Projects\ProjetCSWF\ProjetCSWF\bin\Debug\ProjetCSWF.pdb
+c:\users\utilisateur\documents\visual studio 2013\Projects\ProjetCSWF\ProjetCSWF\obj\Debug\ProjetCSWF.csprojResolveAssemblyReference.cache
+c:\users\utilisateur\documents\visual studio 2013\Projects\ProjetCSWF\ProjetCSWF\obj\Debug\ProjetCSWF.Form1.resources
+c:\users\utilisateur\documents\visual studio 2013\Projects\ProjetCSWF\ProjetCSWF\obj\Debug\ProjetCSWF.Properties.Resources.resources
+c:\users\utilisateur\documents\visual studio 2013\Projects\ProjetCSWF\ProjetCSWF\obj\Debug\ProjetCSWF.csproj.GenerateResource.Cache
+c:\users\utilisateur\documents\visual studio 2013\Projects\ProjetCSWF\ProjetCSWF\obj\Debug\ProjetCSWF.exe
+c:\users\utilisateur\documents\visual studio 2013\Projects\ProjetCSWF\ProjetCSWF\obj\Debug\ProjetCSWF.pdb
