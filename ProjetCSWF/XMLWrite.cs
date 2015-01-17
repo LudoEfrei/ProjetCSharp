@@ -23,7 +23,15 @@ namespace ProjetCSWF
             var path = directory + "/" + nomFichier + ".xml";
             FileStream file = File.Create(path);
 
-            writer.Serialize(file, collections);
+            try
+            {
+                writer.Serialize(file, collections);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.GetBaseException());
+            }
+
             file.Close();
         }
 
@@ -40,7 +48,15 @@ namespace ProjetCSWF
             var path = directory + "/" + nomFichier + ".xml";
             FileStream file = File.Create(path);
 
-            writer.Serialize(file, collections);
+            try
+            {
+                writer.Serialize(file, collections);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.GetBaseException());
+            }
+
             file.Close();
         }
 
@@ -57,7 +73,15 @@ namespace ProjetCSWF
             var path = directory + "/" + nomFichier + ".xml";
             FileStream file = File.Create(path);
 
-            writer.Serialize(file, collections);
+            try
+            {
+                writer.Serialize(file, collections);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.GetBaseException());
+            }
+
             file.Close();
         }
     }

@@ -5,6 +5,38 @@
     <prenom>John</prenom>
     <n_telephone>0689857898</n_telephone>
     <age>25</age>
+    <competences>
+      <Competence>
+        <intitule>Cablage électrique</intitule>
+        <Niveau>2</Niveau>
+      </Competence>
+      <Competence>
+        <intitule>Cablage électrique</intitule>
+        <Niveau>2</Niveau>
+      </Competence>
+    </competences>
+  </EmployeInterim>
+  <EmployeInterim>
+    <nom>Smith</nom>
+    <prenom>Charles</prenom>
+    <n_telephone>0778983545</n_telephone>
+    <age>28</age>
+    <competences>
+      <Competence>
+        <intitule>Cablage électrique</intitule>
+        <Niveau>3</Niveau>
+      </Competence>
+      <Competence>
+        <intitule>Cablage électrique</intitule>
+        <Niveau>3</Niveau>
+      </Competence>
+    </competences>
+  </EmployeInterim>
+  <EmployeInterim>
+    <nom>Doe</nom>
+    <prenom>John</prenom>
+    <n_telephone>0689857898</n_telephone>
+    <age>25</age>
     <competences />
   </EmployeInterim>
   <EmployeInterim>

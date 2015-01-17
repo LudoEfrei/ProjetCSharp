@@ -25,7 +25,9 @@ namespace ProjetCSWF
 
             // Test
             interimaires.Add(new EmployeInterim("Doe", "John", "0689857898", 25));
+            interimaires[0].addCompetences("Cablage électrique", 2);
             interimaires.Add(new EmployeInterim("Smith", "Charles", "0778983545", 28));
+            interimaires[1].addCompetences("Cablage électrique", 3);
 
             entreprises.Add(new Entreprise("Orange", new Adresse("France", "Paris", "78 Rue Olivier De Serres", "75015"),
                 "38012986646850", new Contact("Sanchez", "Emilia", "0778987898")));

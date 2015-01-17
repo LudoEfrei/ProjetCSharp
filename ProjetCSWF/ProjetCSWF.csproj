@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Adresse.cs" />
+    <Compile Include="Competence.cs" />
     <Compile Include="EmployeInterim.cs" />
     <Compile Include="Entreprise.cs" />
     <Compile Include="Form1.cs">

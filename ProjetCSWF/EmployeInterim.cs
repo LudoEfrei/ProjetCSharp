@@ -9,20 +9,20 @@ namespace ProjetCSWF
     public class EmployeInterim : Personne
     {
         public int age {get; set;}
-        public List<string> competences { get; private set; }
+        public List<Competence> competences { get; set; }
 
         public EmployeInterim() { }
 
         public EmployeInterim(string nom, string prenom, string n_telephone, int age) : base(nom, prenom, n_telephone)
         {
             this.age = age;
-            this.competences = new List<string>();
+            this.competences = new List<Competence>();
         }
 
         // Ajout d'une compétence
-        public void addCompetences(string competence)
+        public void addCompetences(string intitule, int niveau)
         {
-            competences.Add(competence);
+            competences.Add(new Competence(intitule, niveau));
         }
 
         public override string ToString()

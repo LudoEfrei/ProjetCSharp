@@ -23,9 +23,49 @@ namespace ProjetCSWF
             }
             catch (Exception ex)
             {
-                Console.WriteLine("ICI JE BUG");
                 Console.WriteLine(ex.GetBaseException());
-                Console.WriteLine("ICI JE BUG");
+            }
+
+            file.Close();
+
+            return interimaires;
+        }
+
+        public static List<EmployeInterim> readXML()
+        {
+            XmlSerializer reader = new XmlSerializer(typeof(List<EmployeInterim>));
+            var directory = Environment.CurrentDirectory + "//data/";
+            StreamReader file = new StreamReader(directory + "/interimaires.xml");
+            List<EmployeInterim> interimaires = new List<EmployeInterim>();
+            try
+            {
+                interimaires = (List<EmployeInterim>)reader.Deserialize(file);
+                Console.WriteLine(interimaires[0]);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.GetBaseException());
+            }
+
+            file.Close();
+
+            return interimaires;
+        }
+
+        public static List<EmployeInterim> ReadXMLinterim()
+        {
+            XmlSerializer reader = new XmlSerializer(typeof(List<EmployeInterim>));
+            var directory = Environment.CurrentDirectory + "//data/";
+            StreamReader file = new StreamReader(directory + "/interimaires.xml");
+            List<EmployeInterim> interimaires = new List<EmployeInterim>();
+            try
+            {
+                interimaires = (List<EmployeInterim>)reader.Deserialize(file);
+                Console.WriteLine(interimaires[0]);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.GetBaseException());
             }
 
             file.Close();
