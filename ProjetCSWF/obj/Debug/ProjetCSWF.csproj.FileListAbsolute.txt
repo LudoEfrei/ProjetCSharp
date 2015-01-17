@@ -7,3 +7,12 @@ c:\users\utilisateur\documents\visual studio 2013\Projects\ProjetCSWF\ProjetCSWF
 c:\users\utilisateur\documents\visual studio 2013\Projects\ProjetCSWF\ProjetCSWF\obj\Debug\ProjetCSWF.csproj.GenerateResource.Cache
 c:\users\utilisateur\documents\visual studio 2013\Projects\ProjetCSWF\ProjetCSWF\obj\Debug\ProjetCSWF.exe
 c:\users\utilisateur\documents\visual studio 2013\Projects\ProjetCSWF\ProjetCSWF\obj\Debug\ProjetCSWF.pdb
+C:\Users\Kevin\Documents\GitHub\ProjetCSharp\ProjetCSWF\bin\Debug\ProjetCSWF.exe.config
+C:\Users\Kevin\Documents\GitHub\ProjetCSharp\ProjetCSWF\obj\Debug\ProjetCSWF.exe
+C:\Users\Kevin\Documents\GitHub\ProjetCSharp\ProjetCSWF\obj\Debug\ProjetCSWF.pdb
+C:\Users\Kevin\Documents\GitHub\ProjetCSharp\ProjetCSWF\bin\Debug\ProjetCSWF.exe
+C:\Users\Kevin\Documents\GitHub\ProjetCSharp\ProjetCSWF\bin\Debug\ProjetCSWF.pdb
+C:\Users\Kevin\Documents\GitHub\ProjetCSharp\ProjetCSWF\obj\Debug\ProjetCSWF.csprojResolveAssemblyReference.cache
+C:\Users\Kevin\Documents\GitHub\ProjetCSharp\ProjetCSWF\obj\Debug\ProjetCSWF.Form1.resources
+C:\Users\Kevin\Documents\GitHub\ProjetCSharp\ProjetCSWF\obj\Debug\ProjetCSWF.Properties.Resources.resources
+C:\Users\Kevin\Documents\GitHub\ProjetCSharp\ProjetCSWF\obj\Debug\ProjetCSWF.csproj.GenerateResource.Cache

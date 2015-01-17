@@ -8,12 +8,12 @@ namespace ProjetCSWF
 {
     class Entreprise
     {
-        private string nom;
-        private string adresse;
-        private string n_siret;
-        private string contact;
+        public string nom { get; set; }
+        public string adresse { get; set; }
+        public string n_siret { get; set; }
+        public Contact contact { get; set; }
 
-        public Entreprise(string nom, string adresse, string n_siret, string contact)
+        public Entreprise(string nom, string adresse, string n_siret, Contact contact)
         {
             this.nom = nom;
             this.adresse = adresse;

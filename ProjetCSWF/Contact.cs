@@ -8,12 +8,8 @@ namespace ProjetCSWF
 {
     class Contact : Personne
     {
-        private string nom;
-        private string prenom;
-        private string n_telephone;
 
-
-
+        public Contact(string nom, string prenom, string n_telephone) : base(nom, prenom, n_telephone) { }
 
 
 
