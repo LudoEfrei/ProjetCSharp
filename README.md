@@ -1,5 +1,4 @@
-# ProjetCSharp
-# Gestion	d'une	agence	de	travail	intérimaire
+# ProjetCSharp - Gestion	d'une	agence	de	travail	intérimaire
 
 Le	 but	 de	 	 ce	 projet	 est	 de	 réaliser	 la	 gestion	 d'une	 agence	 de	 travail	 intérimaire	 qui	 place	 des	
 employés	en	mission	 suite	 à	 des	 commandes	 faites	 par	 des	entreprises clientes ayant	 des	 besoins	
