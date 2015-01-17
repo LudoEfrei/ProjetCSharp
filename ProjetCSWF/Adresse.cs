@@ -25,7 +25,7 @@ namespace ProjetCSWF
 
         public override string ToString()
         {
-            return (rue+", "+ville+", "+CP+", "+pays);
+            return (rue + ", " + CP + " " + ville + " " + pays);
         }
     }
 }

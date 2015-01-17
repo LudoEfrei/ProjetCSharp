@@ -62,5 +62,67 @@ namespace ProjetCSWF
         }
 
         // Recherche
+        // Selon nom/prenom
+        public Interimaires search(string critere)
+        {
+            Interimaires trouvailles = new Interimaires();
+
+            // Query Creation
+            var interimQuery =
+                from interim in this.liste
+                where interim.nom == critere || interim.prenom == critere
+                select interim;
+
+            // Query execution
+            foreach (EmployeInterim interim in interimQuery)
+            {
+                trouvailles.liste.Add(interim);
+                Console.WriteLine(interim);
+            }
+
+            return trouvailles;
+        }
+        
+        // Selon competence (intitule et niveau)
+        public Interimaires searchComp(string intitule, int niveau)
+        {
+            Interimaires trouvailles = new Interimaires();
+            Competence compCorres = new Competence();
+
+            // Recherche de la competence
+            foreach (EmployeInterim interim in this.liste)
+            {
+                compCorres = interim.search(intitule, niveau);
+                if (compCorres.intitule == intitule && compCorres.Niveau == niveau )
+                {
+                    trouvailles.liste.Add(interim);
+                    Console.WriteLine(interim);
+                    Console.WriteLine(interim.search(intitule, niveau));
+                }
+            }
+
+            return trouvailles;
+        }
+
+        // Selon competence juste l'intitulé
+        public Interimaires searchComp(string intitule)
+        {
+            Interimaires trouvailles = new Interimaires();
+            Competence compCorres = new Competence();
+
+            // Recherche de la competence
+            foreach (EmployeInterim interim in this.liste)
+            {
+                compCorres = interim.search(intitule);
+                if (compCorres.intitule == intitule)
+                {
+                    trouvailles.liste.Add(interim);
+                    Console.WriteLine(interim);
+                    Console.WriteLine(interim.search(intitule));
+                }
+            }
+
+            return trouvailles;
+        }
     }
 }

@@ -66,7 +66,8 @@ namespace ProjetCSWF
 
         public override string ToString()
         {
-            return titre + "\n" + entreprise + "\n" + interimaire + "\n" + debut + "\n" + fin + "\n" + avancement + "\n" + risque;
+            return "Titre : " + titre + "\nEntreprise : " + entreprise + "\n Interimaire : \n" + interimaire +
+                "\nDate de debut : " + debut + "\nDate de fin : " + fin + "\nAvancement : " + avancement + "\nRisque : " + risque;
         }
 
     }

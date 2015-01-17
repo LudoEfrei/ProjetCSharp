@@ -29,5 +29,10 @@ namespace ProjetCSWF
                     niveau = value;
             }
         }
+
+        public override string ToString()
+        {
+            return "Competence : " + intitule + "\nNiveau : " + niveau;
+        }
     }
 }

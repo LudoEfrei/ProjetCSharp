@@ -25,9 +25,50 @@ namespace ProjetCSWF
             competences.Add(new Competence(intitule, niveau));
         }
 
+        // Recherche d'une compétence
+        // Selon intitulé et niveau
+        public Competence search(string intitule, int niveau)
+        {
+            Competence trouvaille = new Competence();
+
+            // Query Creation
+            var compQuery =
+                from comp in this.competences
+                where comp.intitule == intitule && comp.Niveau == niveau
+                select comp;
+
+            // Query execution
+            foreach (Competence comp in compQuery)
+            {
+                trouvaille = comp;
+            }
+                
+            return trouvaille;
+        }
+
+        // Selon intitule
+        public Competence search(string intitule)
+        {
+            Competence trouvaille = new Competence();
+
+            // Query Creation
+            var compQuery =
+                from comp in this.competences
+                where comp.intitule == intitule
+                select comp;
+
+            // Query execution
+            foreach (Competence comp in compQuery)
+            {
+                trouvaille = comp;
+            }
+
+            return trouvaille;
+        }
+
         public override string ToString()
         {
-            return (nom + "\n" + prenom + "\n" + n_telephone) + "\n" + age + " ans";
+            return "Nom : " + nom + "\nPrenom : " + prenom + "\nTelephone : " + n_telephone + "\nAge : " + age + " ans";
         }
     }
 }

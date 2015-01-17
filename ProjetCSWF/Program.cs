@@ -43,6 +43,20 @@ namespace ProjetCSWF
 
             // Traitement
 
+            // Recherche
+
+            // Test Chercher John et sa compétence de cablage électrique
+            Console.WriteLine("\nTest 1 : ");
+            interimaires.search("John");
+
+            // Test chercher un mec de compétence cablage électrique
+            Console.WriteLine("\nTest 2 : ");
+            interimaires.searchComp("Cablage électrique");
+
+            // Test chercher un mec de compétence cablage électrique de niveau 3
+            Console.WriteLine("\nTest 3 : ");
+            interimaires.searchComp("Cablage électrique", 3);
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1(interimaires));

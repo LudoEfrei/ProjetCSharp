@@ -23,7 +23,7 @@ namespace ProjetCSWF
 
         public override string ToString()
         {
-            return (nom + "\n" + prenom + "\n" + n_telephone);
+            return "Nom : " + nom + "\nPrenom : " + prenom + "\nTelephone : " + n_telephone;
         }
     }
 }
