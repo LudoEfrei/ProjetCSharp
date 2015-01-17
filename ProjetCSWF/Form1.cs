@@ -31,8 +31,8 @@ namespace ProjetCSWF
         private void button5_Click(object sender, EventArgs e)
         {
             
-            Entreprise ent1 = new Entreprise(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text);
-            MessageBox.Show("Entreprise ajouté a la liste","Entreprises",MessageBoxButtons.OK);
+            //Entreprise ent1 = new Entreprise(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text);
+            //MessageBox.Show("Entreprise ajouté a la liste","Entreprises",MessageBoxButtons.OK);
             groupBox2.Hide();
             groupBox1.Hide();
         }

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<ArrayOfMission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Mission>
+    <titre>Maintenance du parc informatique</titre>
+    <entreprise>
+      <nom>Orange</nom>
+      <adresse>
+        <pays>France</pays>
+        <ville>Paris</ville>
+        <rue>78 Rue Olivier De Serres</rue>
+        <CP>75015</CP>
+      </adresse>
+      <n_siret>38012986646850</n_siret>
+      <contact>
+        <nom>Sanchez</nom>
+        <prenom>Emilia</prenom>
+        <n_telephone>0778987898</n_telephone>
+      </contact>
+    </entreprise>
+    <debut>2015-01-20T00:00:00</debut>
+    <fin>2015-02-20T00:00:00</fin>
+    <Avancement>0</Avancement>
+    <Risque>0</Risque>
+  </Mission>
+</ArrayOfMission>

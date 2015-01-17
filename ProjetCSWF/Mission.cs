@@ -6,14 +6,43 @@ using System.Threading.Tasks;
 
 namespace ProjetCSWF
 {
-    class Mission
+    public class Mission
     {
         public string titre { get; set; }
-        private int avancement;
-        private int risque;
+        public Entreprise entreprise { get; set; }
+        public EmployeInterim interimaire { get; set; }
         public DateTime debut { get; set; }
         public DateTime fin { get; set; }
+        private int avancement;
+        private int risque;
 
+
+        public Mission() { }
+
+        public Mission(string titre, Entreprise entreprise, EmployeInterim interimaire, DateTime debut, DateTime fin)
+        {
+            this.titre = titre;
+            this.entreprise = entreprise;
+            this.interimaire = interimaire;
+            this.debut = debut;
+            this.fin = fin;
+            this.avancement = 0;
+            this.risque = 0;
+        }
+
+        // Constructeur sans employé intérimaire défini
+        public Mission(string titre, Entreprise entreprise, DateTime debut, DateTime fin)
+        {
+            this.titre = titre;
+            this.entreprise = entreprise;
+            //this.interimaire = new EmployeInterim("null", "null", "null", -1);
+            this.debut = debut;
+            this.fin = fin;
+            this.avancement = 0;
+            this.risque = 0;
+        }
+
+        // Avancement en pourcentage
         public int Avancement
         {
             get { return avancement; }
@@ -24,6 +53,7 @@ namespace ProjetCSWF
             }
         }
 
+        // Risque que le travail ne soit pas fini avant la date fin en pourcentage
         public int Risque
         {
             get { return risque; }

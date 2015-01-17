@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ArrayOfEntreprise xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Entreprise>
+    <nom>Orange</nom>
+    <adresse>
+      <pays>France</pays>
+      <ville>Paris</ville>
+      <rue>78 Rue Olivier De Serres</rue>
+      <CP>75015</CP>
+    </adresse>
+    <n_siret>38012986646850</n_siret>
+    <contact>
+      <nom>Sanchez</nom>
+      <prenom>Emilia</prenom>
+      <n_telephone>0778987898</n_telephone>
+    </contact>
+  </Entreprise>
+</ArrayOfEntreprise>

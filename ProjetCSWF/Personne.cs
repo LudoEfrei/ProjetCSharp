@@ -12,6 +12,8 @@ namespace ProjetCSWF
         public string prenom { get; set; }
         public string n_telephone { get; set; }
 
+        public Personne() { }
+
         public Personne(string nom, string prenom, string n_telephone)
         {
             this.nom = nom;

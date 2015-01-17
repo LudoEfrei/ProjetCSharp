@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace ProjetCSWF
 {
-    class Adresse
+    public class Adresse
     {
         public string pays { get; set; }
         public string ville { get; set; }
         public string rue { get; set; }
         public string CP { get; set; }
+
+        public Adresse() { }
 
         public Adresse(string pays, string ville, string rue, string CP)
         {

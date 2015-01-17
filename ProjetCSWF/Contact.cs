@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ProjetCSWF
 {
-    class Contact : Personne
+    public class Contact : Personne
     {
-
+        public Contact() { }
         public Contact(string nom, string prenom, string n_telephone) : base(nom, prenom, n_telephone) { }
 
 

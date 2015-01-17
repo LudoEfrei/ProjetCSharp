@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<ArrayOfEmployeInterim xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EmployeInterim>
+    <nom>Doe</nom>
+    <prenom>John</prenom>
+    <n_telephone>0689857898</n_telephone>
+    <age>25</age>
+    <competences />
+  </EmployeInterim>
+  <EmployeInterim>
+    <nom>Smith</nom>
+    <prenom>Charles</prenom>
+    <n_telephone>0778983545</n_telephone>
+    <age>28</age>
+    <competences />
+  </EmployeInterim>
+</ArrayOfEmployeInterim>
