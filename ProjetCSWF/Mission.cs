@@ -64,5 +64,10 @@ namespace ProjetCSWF
             }
         }
 
+        public override string ToString()
+        {
+            return titre + "\n" + entreprise + "\n" + interimaire + "\n" + debut + "\n" + fin + "\n" + avancement + "\n" + risque;
+        }
+
     }
 }

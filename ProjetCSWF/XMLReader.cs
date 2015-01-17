@@ -19,7 +19,6 @@ namespace ProjetCSWF
             try
             {
                 interimaires = (List<EmployeInterim>)reader.Deserialize(file);
-                Console.WriteLine(interimaires[0]);
             }
             catch (Exception ex)
             {
@@ -31,16 +30,15 @@ namespace ProjetCSWF
             return interimaires;
         }
 
-        public static List<EmployeInterim> readXML()
+        public static List<Entreprise> readXMLEntreprise()
         {
-            XmlSerializer reader = new XmlSerializer(typeof(List<EmployeInterim>));
+            XmlSerializer reader = new XmlSerializer(typeof(List<Entreprise>));
             var directory = Environment.CurrentDirectory + "//data/";
-            StreamReader file = new StreamReader(directory + "/interimaires.xml");
-            List<EmployeInterim> interimaires = new List<EmployeInterim>();
+            StreamReader file = new StreamReader(directory + "/entreprises.xml");
+            List<Entreprise> entreprises = new List<Entreprise>();
             try
             {
-                interimaires = (List<EmployeInterim>)reader.Deserialize(file);
-                Console.WriteLine(interimaires[0]);
+                entreprises = (List<Entreprise>)reader.Deserialize(file);
             }
             catch (Exception ex)
             {
@@ -49,19 +47,18 @@ namespace ProjetCSWF
 
             file.Close();
 
-            return interimaires;
+            return entreprises;
         }
 
-        public static List<EmployeInterim> ReadXMLinterim()
+        public static List<Mission> readXMLMission()
         {
-            XmlSerializer reader = new XmlSerializer(typeof(List<EmployeInterim>));
+            XmlSerializer reader = new XmlSerializer(typeof(List<Mission>));
             var directory = Environment.CurrentDirectory + "//data/";
-            StreamReader file = new StreamReader(directory + "/interimaires.xml");
-            List<EmployeInterim> interimaires = new List<EmployeInterim>();
+            StreamReader file = new StreamReader(directory + "/missions.xml");
+            List<Mission> missions = new List<Mission>();
             try
             {
-                interimaires = (List<EmployeInterim>)reader.Deserialize(file);
-                Console.WriteLine(interimaires[0]);
+                missions = (List<Mission>)reader.Deserialize(file);
             }
             catch (Exception ex)
             {
@@ -70,7 +67,7 @@ namespace ProjetCSWF
 
             file.Close();
 
-            return interimaires;
+            return missions;
         }
     }
 }
