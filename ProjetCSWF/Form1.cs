@@ -12,9 +12,9 @@ namespace ProjetCSWF
 {
     public partial class Form1 : Form
     {
-        public List<EmployeInterim> interimaires;
+        public Interimaires interimaires;
 
-        public Form1(List<EmployeInterim> interimaires)
+        public Form1(Interimaires interimaires)
         {
             InitializeComponent();
             this.interimaires = interimaires;
@@ -23,7 +23,7 @@ namespace ProjetCSWF
 
         private void Employés_Click(object sender, EventArgs e)
         {
-            foreach (EmployeInterim i in interimaires)
+            foreach (EmployeInterim i in interimaires.liste)
             {
                 //Console.WriteLine(i);
                 liste_emp.Columns.Add(i.nom,i.nom);
