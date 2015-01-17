@@ -17,7 +17,6 @@ namespace ProjetCSWF
         {
             // Deserialisation (Chargement)
             List<EmployeInterim> interimaires = XMLReader.ReadXMLinterim();
-
             // Collections
             //List<EmployeInterim> interimaires = new List<EmployeInterim>();
             List<Entreprise> entreprises = new List<Entreprise>();
@@ -38,12 +37,15 @@ namespace ProjetCSWF
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Form1(interimaires));
 
             // Serialisation (Sauvegarde)
             XMLWrite.writeXML(interimaires, "interimaires");
             XMLWrite.writeXML(entreprises, "entreprises");
             XMLWrite.writeXML(missions, "missions");
+
+
+            
             
         }
 

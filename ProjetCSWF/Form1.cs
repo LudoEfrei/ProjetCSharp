@@ -12,30 +12,34 @@ namespace ProjetCSWF
 {
     public partial class Form1 : Form
     {
-        public Form1()
-        {
-            InitializeComponent();    
-        }
+        public List<EmployeInterim> interimaires;
 
-        private void button1_Click(object sender, EventArgs e)
+        public Form1(List<EmployeInterim> interimaires)
         {
-            groupBox1.Show();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            groupBox2.Show();
+            InitializeComponent();
+            this.interimaires = interimaires;
         }
 
 
-        private void button5_Click(object sender, EventArgs e)
+        private void Employés_Click(object sender, EventArgs e)
         {
+            foreach (EmployeInterim i in interimaires)
+            {
+                //Console.WriteLine(i);
+                liste_emp.Columns.Add(i.nom,i.nom);
+                liste_emp.Rows.Add("salut");
+                
+            }
+           // liste_emp.Columns.Add("coucou", "coucou");
+            //liste_emp.Rows.Add("salut", 4);
             
-            //Entreprise ent1 = new Entreprise(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text);
-            //MessageBox.Show("Entreprise ajouté a la liste","Entreprises",MessageBoxButtons.OK);
-            groupBox2.Hide();
-            groupBox1.Hide();
+            Missions.Hide();
+            Entreprises.Hide();
+            Employés.Hide();
         }
+
+
+        
 
 
 

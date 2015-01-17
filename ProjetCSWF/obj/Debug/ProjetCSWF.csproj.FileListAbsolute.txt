@@ -16,3 +16,12 @@ C:\Users\Kevin\Documents\GitHub\ProjetCSharp\ProjetCSWF\obj\Debug\ProjetCSWF.csp
 C:\Users\Kevin\Documents\GitHub\ProjetCSharp\ProjetCSWF\obj\Debug\ProjetCSWF.Form1.resources
 C:\Users\Kevin\Documents\GitHub\ProjetCSharp\ProjetCSWF\obj\Debug\ProjetCSWF.Properties.Resources.resources
 C:\Users\Kevin\Documents\GitHub\ProjetCSharp\ProjetCSWF\obj\Debug\ProjetCSWF.csproj.GenerateResource.Cache
+C:\Users\Utilisateur\Documents\GitHub\ProjetCSharp\ProjetCSWF\bin\Debug\ProjetCSWF.exe.config
+C:\Users\Utilisateur\Documents\GitHub\ProjetCSharp\ProjetCSWF\obj\Debug\ProjetCSWF.exe
+C:\Users\Utilisateur\Documents\GitHub\ProjetCSharp\ProjetCSWF\obj\Debug\ProjetCSWF.pdb
+C:\Users\Utilisateur\Documents\GitHub\ProjetCSharp\ProjetCSWF\bin\Debug\ProjetCSWF.exe
+C:\Users\Utilisateur\Documents\GitHub\ProjetCSharp\ProjetCSWF\bin\Debug\ProjetCSWF.pdb
+C:\Users\Utilisateur\Documents\GitHub\ProjetCSharp\ProjetCSWF\obj\Debug\ProjetCSWF.csprojResolveAssemblyReference.cache
+C:\Users\Utilisateur\Documents\GitHub\ProjetCSharp\ProjetCSWF\obj\Debug\ProjetCSWF.Form1.resources
+C:\Users\Utilisateur\Documents\GitHub\ProjetCSharp\ProjetCSWF\obj\Debug\ProjetCSWF.Properties.Resources.resources
+C:\Users\Utilisateur\Documents\GitHub\ProjetCSharp\ProjetCSWF\obj\Debug\ProjetCSWF.csproj.GenerateResource.Cache
