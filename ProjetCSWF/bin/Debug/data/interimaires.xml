@@ -11,6 +11,7 @@
         <Niveau>2</Niveau>
       </Competence>
     </competences>
+    <tarif>0</tarif>
   </EmployeInterim>
   <EmployeInterim>
     <nom>Smith</nom>
@@ -23,6 +24,7 @@
         <Niveau>3</Niveau>
       </Competence>
     </competences>
+    <tarif>0</tarif>
   </EmployeInterim>
   <EmployeInterim>
     <nom>Yamada</nom>
@@ -30,5 +32,14 @@
     <n_telephone>0772989545</n_telephone>
     <age>23</age>
     <competences />
+    <tarif>0</tarif>
+  </EmployeInterim>
+  <EmployeInterim>
+    <nom>Yamada</nom>
+    <prenom>Asami</prenom>
+    <n_telephone>0772989545</n_telephone>
+    <age>23</age>
+    <competences />
+    <tarif>33</tarif>
   </EmployeInterim>
 </ArrayOfEmployeInterim>

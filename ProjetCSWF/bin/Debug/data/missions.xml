@@ -19,7 +19,12 @@
     </entreprise>
     <debut>2015-01-20T00:00:00</debut>
     <fin>2015-02-20T00:00:00</fin>
-    <Avancement>0</Avancement>
+    <avancements>
+      <Avancement>
+        <milestone>2015-01-18T00:00:00+01:00</milestone>
+        <Pourcentage>0</Pourcentage>
+      </Avancement>
+    </avancements>
     <Risque>0</Risque>
   </Mission>
   <Mission>
@@ -50,10 +55,16 @@
           <Niveau>2</Niveau>
         </Competence>
       </competences>
+      <tarif>0</tarif>
     </interimaire>
     <debut>2015-01-20T00:00:00</debut>
     <fin>2015-02-20T00:00:00</fin>
-    <Avancement>0</Avancement>
+    <avancements>
+      <Avancement>
+        <milestone>2015-01-18T00:00:00+01:00</milestone>
+        <Pourcentage>0</Pourcentage>
+      </Avancement>
+    </avancements>
     <Risque>0</Risque>
   </Mission>
   <Mission>
@@ -79,10 +90,56 @@
       <n_telephone>0772989545</n_telephone>
       <age>23</age>
       <competences />
+      <tarif>0</tarif>
     </interimaire>
     <debut>2015-03-01T00:00:00</debut>
     <fin>2016-03-01T00:00:00</fin>
-    <Avancement>0</Avancement>
+    <avancements>
+      <Avancement>
+        <milestone>2015-01-18T00:00:00+01:00</milestone>
+        <Pourcentage>0</Pourcentage>
+      </Avancement>
+    </avancements>
+    <Risque>0</Risque>
+  </Mission>
+  <Mission>
+    <titre>Cablage réseau</titre>
+    <entreprise>
+      <nom>Microsoft France</nom>
+      <adresse>
+        <pays>France</pays>
+        <ville>Issy les Moulineaux</ville>
+        <rue>39 Quai du President Roosevelt</rue>
+        <CP>92130</CP>
+      </adresse>
+      <n_siret>32773318400516</n_siret>
+      <contact>
+        <nom>Schneider</nom>
+        <prenom>Cristal</prenom>
+        <n_telephone>0970019090</n_telephone>
+      </contact>
+    </entreprise>
+    <interimaire>
+      <nom>Smith</nom>
+      <prenom>Charles</prenom>
+      <n_telephone>0778983545</n_telephone>
+      <age>28</age>
+      <competences>
+        <Competence>
+          <intitule>Cablage électrique</intitule>
+          <Niveau>3</Niveau>
+        </Competence>
+      </competences>
+      <tarif>0</tarif>
+    </interimaire>
+    <debut>2014-06-25T00:00:00</debut>
+    <fin>2015-06-25T00:00:00</fin>
+    <avancements>
+      <Avancement>
+        <milestone>2015-01-18T00:00:00+01:00</milestone>
+        <Pourcentage>0</Pourcentage>
+      </Avancement>
+    </avancements>
     <Risque>0</Risque>
   </Mission>
 </ArrayOfMission>

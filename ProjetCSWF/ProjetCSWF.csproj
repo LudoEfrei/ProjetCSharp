@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Adresse.cs" />
+    <Compile Include="Avancement.cs" />
     <Compile Include="Competence.cs" />
     <Compile Include="EmployeInterim.cs" />
     <Compile Include="Entreprise.cs" />
@@ -55,6 +56,10 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs" />
     <Compile Include="Interimaires.cs" />
     <Compile Include="Mission.cs" />
     <Compile Include="Missions.cs" />
@@ -65,6 +70,7 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

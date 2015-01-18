@@ -87,7 +87,7 @@ namespace ProjetCSWF
             int cpt = 0;
             foreach (Mission i in missions.liste)
             {
-                liste.Rows.Add(i.titre, i.entreprise.nom, i.debut, i.fin, i.Avancement.ToString(),i.Risque.ToString());
+                liste.Rows.Add(i.titre, i.entreprise.nom, i.debut, i.fin, i.avancements.Last(),i.Risque.ToString()+"%");
                 liste.Rows[cpt].HeaderCell.Value = (cpt + 1).ToString();
                 cpt++;
             }

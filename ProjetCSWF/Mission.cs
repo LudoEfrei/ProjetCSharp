@@ -13,7 +13,7 @@ namespace ProjetCSWF
         public EmployeInterim interimaire { get; set; }
         public DateTime debut { get; set; }
         public DateTime fin { get; set; }
-        private int avancement;
+        public List<Avancement> avancements { get; set; }
         private int risque;
 
 
@@ -26,7 +26,8 @@ namespace ProjetCSWF
             this.interimaire = interimaire;
             this.debut = debut;
             this.fin = fin;
-            this.avancement = 0;
+            this.avancements = new List<Avancement>();
+            this.avancements.Add(new Avancement(0, DateTime.Today));
             this.risque = 0;
         }
 
@@ -37,19 +38,9 @@ namespace ProjetCSWF
             this.entreprise = entreprise;
             this.debut = debut;
             this.fin = fin;
-            this.avancement = 0;
+            this.avancements = new List<Avancement>();
+            this.avancements.Add(new Avancement(0, DateTime.Today));
             this.risque = 0;
-        }
-
-        // Avancement en pourcentage
-        public int Avancement
-        {
-            get { return avancement; }
-            set 
-            {  
-                if ((value >= 0) && (value <= 100))
-                    avancement = value;
-            }
         }
 
         // Risque que le travail ne soit pas fini avant la date fin en pourcentage
@@ -87,10 +78,59 @@ namespace ProjetCSWF
 
         }
 
+        // Lister les avancements de la mission durant une période de temps
+        public List<Avancement> listAvancements(DateTime de, DateTime a)
+        {
+            List<Avancement> trouvailles = new List<Avancement>();
+
+            var avtQuery =
+                from avt in this.avancements
+                where avt.milestone >= de && avt.milestone <= a
+                select avt;
+            Console.WriteLine("Avancements du " + de + " au " + a + " : ");
+            foreach (Avancement avt in avtQuery)
+            {
+                Console.WriteLine(avt);
+                trouvailles.Add(avt);
+            }
+
+            return trouvailles;
+        }
+
+        // Faire une facture
+        public void makeFacture()
+        {
+            if (this.fin < DateTime.Today)
+            {
+                Console.WriteLine("La mission n'est pas terminée, impossible de faire une facture.");
+            }
+            else 
+            {
+                Console.WriteLine(this);
+                double result = (double)this.interimaire.tarif;
+                result *= (this.fin - this.debut).TotalDays;
+                Console.WriteLine("Salaire : " + result + " euros");
+            }
+        }
+
+        // Editer une facture
+        public void  editFacture(double salaire)
+        {
+            if (this.fin < DateTime.Today)
+            {
+                Console.WriteLine("La mission n'est pas terminée, il n'y a pas de facture à éditer.");
+            }
+            else
+            {
+                Console.WriteLine(this);
+                Console.WriteLine("Salaire : " + salaire + " euros");
+            }
+        }
+
         public override string ToString()
         {
             return "Titre : " + titre + "\nEntreprise : " + entreprise + "\nInterimaire : \n" + interimaire +
-                "\nDate de debut : " + debut + "\nDate de fin : " + fin + "\nAvancement : " + avancement + "\nRisque : " + risque;
+                "\nDate de debut : " + debut + "\nDate de fin : " + fin + "\nAvancement : " + avancements.Last() +"\nRisque : " + risque + "%";
         }
 
     }

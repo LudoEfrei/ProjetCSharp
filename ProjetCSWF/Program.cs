@@ -77,6 +77,18 @@ namespace ProjetCSWF
             Console.WriteLine("\nTest 14 : ");
             Console.WriteLine(interimaires.liste[0].listComp());
 
+            // Test avancement d'une mission
+            Console.WriteLine("\nTest 15 : ");
+            Console.WriteLine(missions.search("cablage réseau").liste[0]);
+
+            // Test avancements d'une mission en fonction du temps
+            // date dans intervalle
+            Console.WriteLine("\nTest 16 : ");
+            missions.search("cablage réseau").liste[0].listAvancements(new DateTime(2015, 1, 17), new DateTime(2015, 2, 17));
+            // date pas dans intervalle
+            Console.WriteLine("\nTest 17 : ");
+            missions.search("cablage data center").liste[0].listAvancements(new DateTime(2015, 1, 16), new DateTime(2015, 1, 17));
+
             // Interface Graphique
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

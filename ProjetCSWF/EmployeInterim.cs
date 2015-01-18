@@ -8,14 +8,16 @@ namespace ProjetCSWF
 {
     public class EmployeInterim : Personne
     {
-        public int age {get; set;}
+        public int age { get; set; }
         public List<Competence> competences { get; set; }
+        public int tarif { get; set; }
 
         public EmployeInterim() { }
 
         public EmployeInterim(string nom, string prenom, string n_telephone, int age) : base(nom, prenom, n_telephone)
         {
             this.age = age;
+            this.tarif = 33;
             this.competences = new List<Competence>();
         }
 

@@ -25,3 +25,4 @@ C:\Users\Utilisateur\Documents\GitHub\ProjetCSharp\ProjetCSWF\obj\Debug\ProjetCS
 C:\Users\Utilisateur\Documents\GitHub\ProjetCSharp\ProjetCSWF\obj\Debug\ProjetCSWF.Form1.resources
 C:\Users\Utilisateur\Documents\GitHub\ProjetCSharp\ProjetCSWF\obj\Debug\ProjetCSWF.Properties.Resources.resources
 C:\Users\Utilisateur\Documents\GitHub\ProjetCSharp\ProjetCSWF\obj\Debug\ProjetCSWF.csproj.GenerateResource.Cache
+C:\Users\Kevin\Documents\GitHub\ProjetCSharp\ProjetCSWF\obj\Debug\ProjetCSWF.Form2.resources

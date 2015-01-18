@@ -15,4 +15,19 @@
       <n_telephone>0778987898</n_telephone>
     </contact>
   </Entreprise>
+  <Entreprise>
+    <nom>Microsoft France</nom>
+    <adresse>
+      <pays>France</pays>
+      <ville>Issy les Moulineaux</ville>
+      <rue>39 Quai du President Roosevelt</rue>
+      <CP>92130</CP>
+    </adresse>
+    <n_siret>32773318400516</n_siret>
+    <contact>
+      <nom>Schneider</nom>
+      <prenom>Cristal</prenom>
+      <n_telephone>0970019090</n_telephone>
+    </contact>
+  </Entreprise>
 </ArrayOfEntreprise>
