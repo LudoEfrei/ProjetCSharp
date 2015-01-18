@@ -30,4 +30,19 @@
       <n_telephone>0970019090</n_telephone>
     </contact>
   </Entreprise>
+  <Entreprise>
+    <nom>Sony</nom>
+    <adresse>
+      <pays>France</pays>
+      <ville>Paris</ville>
+      <rue>10 rue du crotal</rue>
+      <CP>75002</CP>
+    </adresse>
+    <n_siret>55465653232532</n_siret>
+    <contact>
+      <nom>Jean</nom>
+      <prenom>Jean</prenom>
+      <n_telephone>0656897454</n_telephone>
+    </contact>
+  </Entreprise>
 </ArrayOfEntreprise>
