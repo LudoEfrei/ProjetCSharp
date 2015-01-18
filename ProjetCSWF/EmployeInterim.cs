@@ -65,6 +65,22 @@ namespace ProjetCSWF
             return trouvaille;
         }
 
+        public string listComp()
+        {
+            string laListe = "";
+
+            var compQuery =
+                from comp in this.competences
+                select comp;
+
+            foreach (Competence comp in compQuery)
+            {
+                laListe += "[" + comp.intitule + "] (" + comp.Niveau + ") ";
+            }
+
+            return laListe;
+        }
+
         public override string ToString()
         {
             return "Nom : " + nom + "\n Prenom : " + prenom + "\n Telephone : " + n_telephone + "\n Age : " + age + " ans";

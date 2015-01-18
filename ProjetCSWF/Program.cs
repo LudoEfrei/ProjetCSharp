@@ -73,6 +73,10 @@ namespace ProjetCSWF
             Console.WriteLine("\nTest 13 : ");
             missions.search("balayage des toilettes").liste[0].embaucher(missions, interimaires.search("asami yamada").liste[0]);
 
+            // Test listage de compétences
+            Console.WriteLine("\nTest 14 : ");
+            Console.WriteLine(interimaires.liste[0].listComp());
+
             // Interface Graphique
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
