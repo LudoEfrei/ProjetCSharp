@@ -92,21 +92,5 @@ namespace ProjetCSWF
 
             return trouvailles;
         }
-
-        // Lister
-        public void show()
-        {
-            // Query Creation
-            var enterpriseQuery =
-                from enterprise in this.liste
-                select enterprise;
-
-            // Query execution
-            foreach (Entreprise enterprise in enterpriseQuery)
-            {
-                // Affichage dans form ?
-                Console.WriteLine(enterprise);
-            }
-        }
     }
 }

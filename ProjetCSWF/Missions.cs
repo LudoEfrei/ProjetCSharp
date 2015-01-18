@@ -198,21 +198,5 @@ namespace ProjetCSWF
 
             return trouvailles;
         }
-
-        // Lister
-        public void show()
-        {
-            // Query Creation
-            var missionQuery =
-                from mission in this.liste
-                select mission;
-
-            // Query execution
-            foreach (Mission mission in missionQuery)
-            {
-                // Affichage dans form ?
-                Console.WriteLine(mission);
-            }
-        }
     }
 }

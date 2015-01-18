@@ -75,7 +75,7 @@ namespace ProjetCSWF
 
             foreach (Competence comp in compQuery)
             {
-                laListe += "[" + comp.intitule + "] (" + comp.Niveau + ") ";
+                laListe += "[" + comp.intitule + "] (Niveau : " + comp.Niveau + ") ";
             }
 
             return laListe;

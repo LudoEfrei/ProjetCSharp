@@ -142,21 +142,5 @@ namespace ProjetCSWF
 
             return trouvailles;
         }
-
-        // Lister
-        public void show()
-        {
-            // Query Creation
-            var interimQuery =
-                from interim in this.liste
-                select interim;
-
-            // Query execution
-            foreach (EmployeInterim interim in interimQuery)
-            {
-                // Affichage dans form ?
-                Console.WriteLine(interim);
-            }
-        }
     }
 }
