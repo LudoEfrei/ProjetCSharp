@@ -34,13 +34,14 @@
             this.liste = new System.Windows.Forms.DataGridView();
             this.Kinterimo = new System.Windows.Forms.Label();
             this.button_ajouter = new System.Windows.Forms.Button();
+            this.button_valider = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.liste)).BeginInit();
             this.SuspendLayout();
             // 
             // button_Ent
             // 
             this.button_Ent.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Ent.Location = new System.Drawing.Point(146, 71);
+            this.button_Ent.Location = new System.Drawing.Point(146, 73);
             this.button_Ent.Name = "button_Ent";
             this.button_Ent.Size = new System.Drawing.Size(93, 53);
             this.button_Ent.TabIndex = 0;
@@ -51,7 +52,7 @@
             // button_empl
             // 
             this.button_empl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_empl.Location = new System.Drawing.Point(146, 149);
+            this.button_empl.Location = new System.Drawing.Point(146, 144);
             this.button_empl.Name = "button_empl";
             this.button_empl.Size = new System.Drawing.Size(93, 53);
             this.button_empl.TabIndex = 1;
@@ -62,7 +63,7 @@
             // button_miss
             // 
             this.button_miss.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_miss.Location = new System.Drawing.Point(146, 231);
+            this.button_miss.Location = new System.Drawing.Point(146, 213);
             this.button_miss.Name = "button_miss";
             this.button_miss.Size = new System.Drawing.Size(93, 53);
             this.button_miss.TabIndex = 2;
@@ -77,7 +78,7 @@
             this.liste.AllowUserToDeleteRows = false;
             this.liste.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.liste.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.liste.Location = new System.Drawing.Point(36, 102);
+            this.liste.Location = new System.Drawing.Point(37, 112);
             this.liste.Name = "liste";
             this.liste.ReadOnly = true;
             this.liste.Size = new System.Drawing.Size(332, 154);
@@ -96,7 +97,7 @@
             // 
             // button_ajouter
             // 
-            this.button_ajouter.Location = new System.Drawing.Point(36, 71);
+            this.button_ajouter.Location = new System.Drawing.Point(37, 73);
             this.button_ajouter.Name = "button_ajouter";
             this.button_ajouter.Size = new System.Drawing.Size(75, 23);
             this.button_ajouter.TabIndex = 5;
@@ -105,6 +106,16 @@
             this.button_ajouter.Visible = false;
             this.button_ajouter.Click += new System.EventHandler(this.button_ajouter_Click);
             // 
+            // button_valider
+            // 
+            this.button_valider.Location = new System.Drawing.Point(127, 73);
+            this.button_valider.Name = "button_valider";
+            this.button_valider.Size = new System.Drawing.Size(75, 23);
+            this.button_valider.TabIndex = 6;
+            this.button_valider.Text = "Valider";
+            this.button_valider.UseVisualStyleBackColor = true;
+            this.button_valider.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -112,10 +123,11 @@
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(404, 327);
             this.Controls.Add(this.button_ajouter);
+            this.Controls.Add(this.button_valider);
+            this.Controls.Add(this.button_Ent);
             this.Controls.Add(this.Kinterimo);
             this.Controls.Add(this.button_miss);
             this.Controls.Add(this.button_empl);
-            this.Controls.Add(this.button_Ent);
             this.Controls.Add(this.liste);
             this.Name = "Form1";
             this.Text = "Kinterimo";
@@ -133,6 +145,7 @@
         private System.Windows.Forms.DataGridView liste;
         private System.Windows.Forms.Label Kinterimo;
         private System.Windows.Forms.Button button_ajouter;
+        private System.Windows.Forms.Button button_valider;
 
     }
 }

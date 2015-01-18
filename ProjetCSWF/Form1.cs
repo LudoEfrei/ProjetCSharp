@@ -28,6 +28,7 @@ namespace ProjetCSWF
 
         private void button_empl_Click(object sender, EventArgs e)
         {
+            /*
             liste.Columns.Add("Nom", "Nom");
             liste.Columns.Add("Prénom", "Prenom");
             liste.Columns.Add("N°tel", "N°tel");
@@ -37,7 +38,7 @@ namespace ProjetCSWF
             int cpt = 0;
             foreach (EmployeInterim i in interimaires.liste)
             {    
-                liste.Rows.Add(i.nom,i.prenom,i.n_telephone,i.age,i.competences);
+                liste.Rows.Add(i.nom,i.prenom,i.n_telephone,i.age,i.listComp());
                 liste.Rows[cpt].HeaderCell.Value = (cpt+1).ToString();
                 cpt++;
             }
@@ -47,6 +48,9 @@ namespace ProjetCSWF
             button_empl.Hide();
             liste.Show();
             button_ajouter.Show();
+             * */
+            Form2 f2 = new Form2(interimaires);
+            f2.Show();
         }
 
         private void button_Ent_Click(object sender, EventArgs e)
@@ -77,13 +81,13 @@ namespace ProjetCSWF
             liste.Columns.Add("Entreprise", "Entreprise");
             liste.Columns.Add("Début", "Début");
             liste.Columns.Add("Fin", "Fin");
-           /* liste.Columns.Add("Avancement", "Avancement");
-            liste.Columns.Add("Risque", "Risque");*/
+            liste.Columns.Add("Avancement", "Avancement");
+            liste.Columns.Add("Risque", "Risque");
 
             int cpt = 0;
             foreach (Mission i in missions.liste)
             {
-                liste.Rows.Add(i.titre, i.entreprise.nom, i.debut, i.fin/*, i.avancement.ToString(),i.risque*/);
+                liste.Rows.Add(i.titre, i.entreprise.nom, i.debut, i.fin, i.Avancement.ToString(),i.Risque.ToString());
                 liste.Rows[cpt].HeaderCell.Value = (cpt + 1).ToString();
                 cpt++;
             }
@@ -97,7 +101,7 @@ namespace ProjetCSWF
         }
         private void button_ajouter_Click(object sender, EventArgs e)
         {
-
+            button_valider.Show();
             //   int nbr_ligne = liste.Rows.Count;
             liste.AllowUserToAddRows = true;
             liste.ReadOnly = false;
@@ -105,8 +109,7 @@ namespace ProjetCSWF
             /*  liste.row
               int index = liste.Rows.GetLastRow();*/
         }
-
-        
+       
 
     }
 }
