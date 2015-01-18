@@ -28,49 +28,82 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Entreprises = new System.Windows.Forms.Button();
-            this.Employés = new System.Windows.Forms.Button();
-            this.Missions = new System.Windows.Forms.Button();
-            this.liste_emp = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.liste_emp)).BeginInit();
+            this.button_Ent = new System.Windows.Forms.Button();
+            this.button_empl = new System.Windows.Forms.Button();
+            this.button_miss = new System.Windows.Forms.Button();
+            this.liste = new System.Windows.Forms.DataGridView();
+            this.Kinterimo = new System.Windows.Forms.Label();
+            this.button_ajouter = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.liste)).BeginInit();
             this.SuspendLayout();
             // 
-            // Entreprises
+            // button_Ent
             // 
-            this.Entreprises.Location = new System.Drawing.Point(12, 12);
-            this.Entreprises.Name = "Entreprises";
-            this.Entreprises.Size = new System.Drawing.Size(93, 53);
-            this.Entreprises.TabIndex = 0;
-            this.Entreprises.Text = "Entreprises";
-            this.Entreprises.UseVisualStyleBackColor = true;
+            this.button_Ent.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Ent.Location = new System.Drawing.Point(146, 71);
+            this.button_Ent.Name = "button_Ent";
+            this.button_Ent.Size = new System.Drawing.Size(93, 53);
+            this.button_Ent.TabIndex = 0;
+            this.button_Ent.Text = "Entreprises";
+            this.button_Ent.UseVisualStyleBackColor = true;
+            this.button_Ent.Click += new System.EventHandler(this.button_Ent_Click);
             // 
-            // Employés
+            // button_empl
             // 
-            this.Employés.Location = new System.Drawing.Point(122, 12);
-            this.Employés.Name = "Employés";
-            this.Employés.Size = new System.Drawing.Size(93, 53);
-            this.Employés.TabIndex = 1;
-            this.Employés.Text = "Employés";
-            this.Employés.UseVisualStyleBackColor = true;
-            this.Employés.Click += new System.EventHandler(this.Employés_Click);
+            this.button_empl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_empl.Location = new System.Drawing.Point(146, 149);
+            this.button_empl.Name = "button_empl";
+            this.button_empl.Size = new System.Drawing.Size(93, 53);
+            this.button_empl.TabIndex = 1;
+            this.button_empl.Text = "Employés";
+            this.button_empl.UseVisualStyleBackColor = true;
+            this.button_empl.Click += new System.EventHandler(this.button_empl_Click);
             // 
-            // Missions
+            // button_miss
             // 
-            this.Missions.Location = new System.Drawing.Point(236, 12);
-            this.Missions.Name = "Missions";
-            this.Missions.Size = new System.Drawing.Size(93, 53);
-            this.Missions.TabIndex = 2;
-            this.Missions.Text = "Missions";
-            this.Missions.UseCompatibleTextRendering = true;
-            this.Missions.UseVisualStyleBackColor = true;
+            this.button_miss.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_miss.Location = new System.Drawing.Point(146, 231);
+            this.button_miss.Name = "button_miss";
+            this.button_miss.Size = new System.Drawing.Size(93, 53);
+            this.button_miss.TabIndex = 2;
+            this.button_miss.Text = "Missions";
+            this.button_miss.UseCompatibleTextRendering = true;
+            this.button_miss.UseVisualStyleBackColor = true;
+            this.button_miss.Click += new System.EventHandler(this.button_miss_Click);
             // 
-            // liste_emp
+            // liste
             // 
-            this.liste_emp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.liste_emp.Location = new System.Drawing.Point(12, 100);
-            this.liste_emp.Name = "liste_emp";
-            this.liste_emp.Size = new System.Drawing.Size(240, 150);
-            this.liste_emp.TabIndex = 3;
+            this.liste.AllowUserToAddRows = false;
+            this.liste.AllowUserToDeleteRows = false;
+            this.liste.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.liste.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.liste.Location = new System.Drawing.Point(36, 102);
+            this.liste.Name = "liste";
+            this.liste.ReadOnly = true;
+            this.liste.Size = new System.Drawing.Size(332, 154);
+            this.liste.TabIndex = 3;
+            this.liste.Visible = false;
+            // 
+            // Kinterimo
+            // 
+            this.Kinterimo.AutoSize = true;
+            this.Kinterimo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Kinterimo.Location = new System.Drawing.Point(131, 9);
+            this.Kinterimo.Name = "Kinterimo";
+            this.Kinterimo.Size = new System.Drawing.Size(128, 31);
+            this.Kinterimo.TabIndex = 4;
+            this.Kinterimo.Text = "Kinterimo";
+            // 
+            // button_ajouter
+            // 
+            this.button_ajouter.Location = new System.Drawing.Point(36, 71);
+            this.button_ajouter.Name = "button_ajouter";
+            this.button_ajouter.Size = new System.Drawing.Size(75, 23);
+            this.button_ajouter.TabIndex = 5;
+            this.button_ajouter.Text = "Ajouter";
+            this.button_ajouter.UseVisualStyleBackColor = true;
+            this.button_ajouter.Visible = false;
+            this.button_ajouter.Click += new System.EventHandler(this.button_ajouter_Click);
             // 
             // Form1
             // 
@@ -78,23 +111,28 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(404, 327);
-            this.Controls.Add(this.liste_emp);
-            this.Controls.Add(this.Missions);
-            this.Controls.Add(this.Employés);
-            this.Controls.Add(this.Entreprises);
+            this.Controls.Add(this.button_ajouter);
+            this.Controls.Add(this.Kinterimo);
+            this.Controls.Add(this.button_miss);
+            this.Controls.Add(this.button_empl);
+            this.Controls.Add(this.button_Ent);
+            this.Controls.Add(this.liste);
             this.Name = "Form1";
             this.Text = "Kinterimo";
-            ((System.ComponentModel.ISupportInitialize)(this.liste_emp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.liste)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button Entreprises;
-        private System.Windows.Forms.Button Employés;
-        private System.Windows.Forms.Button Missions;
-        private System.Windows.Forms.DataGridView liste_emp;
+        private System.Windows.Forms.Button button_Ent;
+        private System.Windows.Forms.Button button_empl;
+        private System.Windows.Forms.Button button_miss;
+        private System.Windows.Forms.DataGridView liste;
+        private System.Windows.Forms.Label Kinterimo;
+        private System.Windows.Forms.Button button_ajouter;
 
     }
 }

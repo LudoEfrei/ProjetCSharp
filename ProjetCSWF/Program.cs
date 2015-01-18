@@ -76,7 +76,7 @@ namespace ProjetCSWF
             // Interface Graphique
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1(interimaires));
+            Application.Run(new Form1(interimaires,entreprises,missions));
 
             // Serialisation des collections (Sauvegarde)
             interimaires.writeXML();

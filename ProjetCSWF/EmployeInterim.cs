@@ -67,7 +67,7 @@ namespace ProjetCSWF
 
         public override string ToString()
         {
-            return "Nom : " + nom + "\nPrenom : " + prenom + "\nTelephone : " + n_telephone + "\nAge : " + age + " ans";
+            return "Nom : " + nom + "\n Prenom : " + prenom + "\n Telephone : " + n_telephone + "\n Age : " + age + " ans";
         }
 
 
