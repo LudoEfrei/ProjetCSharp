@@ -53,6 +53,36 @@ namespace ProjetCSWF
             EmployeInterim nouveau_empl=(new EmployeInterim(nom,prenom,n_telephone,age));
             interimaires.liste.Add(nouveau_empl);
         }
+
+        private void button_supprimer_Click(object sender, EventArgs e)
+        {
+            // MessageBox.Show("Etes-vous sur de vouloir supprimer ?", "Supprimer", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+            if (MessageBox.Show("Etes-vous sur de vouloir supprimer ?", "Supprimer", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                int index_supp = liste1.CurrentRow.Index;
+                int cpt = 0;
+                foreach (EmployeInterim i in interimaires.liste)
+                {
+                    if (cpt == index_supp)
+                    {
+                        interimaires.liste.Remove(i);
+                        liste1.Rows.Clear();
+                        int cpt1 = 0;
+                        foreach (EmployeInterim i2 in interimaires.liste)
+                        {
+                            liste1.Rows.Add(i2.nom, i2.prenom, i2.n_telephone, i2.age, i2.listComp());
+                            liste1.Rows[cpt1].HeaderCell.Value = (cpt1 + 1).ToString();
+                            cpt1++;
+                        }
+
+                        return;
+                    }
+                    cpt++;
+
+                }
+            }
+           
+        }
             
 
 

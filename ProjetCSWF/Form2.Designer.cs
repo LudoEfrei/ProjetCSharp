@@ -32,6 +32,7 @@
             this.button_valider = new System.Windows.Forms.Button();
             this.button_ajouter = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button_supprimer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.liste1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,12 +78,23 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Employés Intérimaires";
             // 
+            // button_supprimer
+            // 
+            this.button_supprimer.Location = new System.Drawing.Point(26, 252);
+            this.button_supprimer.Name = "button_supprimer";
+            this.button_supprimer.Size = new System.Drawing.Size(75, 23);
+            this.button_supprimer.TabIndex = 8;
+            this.button_supprimer.Text = "Supprimer";
+            this.button_supprimer.UseVisualStyleBackColor = true;
+            this.button_supprimer.Click += new System.EventHandler(this.button_supprimer_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(383, 287);
+            this.Controls.Add(this.button_supprimer);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button_ajouter);
             this.Controls.Add(this.button_valider);
@@ -101,6 +113,7 @@
         private System.Windows.Forms.Button button_valider;
         private System.Windows.Forms.Button button_ajouter;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button_supprimer;
 
     }
 }

@@ -34,6 +34,7 @@
             this.liste1 = new System.Windows.Forms.DataGridView();
             this.button_adresse = new System.Windows.Forms.Button();
             this.button_contact = new System.Windows.Forms.Button();
+            this.button_supprimer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.liste1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,12 +102,23 @@
             this.button_contact.Visible = false;
             this.button_contact.Click += new System.EventHandler(this.button_contact_Click);
             // 
+            // button_supprimer
+            // 
+            this.button_supprimer.Location = new System.Drawing.Point(26, 240);
+            this.button_supprimer.Name = "button_supprimer";
+            this.button_supprimer.Size = new System.Drawing.Size(75, 23);
+            this.button_supprimer.TabIndex = 11;
+            this.button_supprimer.Text = "Supprimer";
+            this.button_supprimer.UseVisualStyleBackColor = true;
+            this.button_supprimer.Click += new System.EventHandler(this.button_supprimer_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(367, 249);
+            this.ClientSize = new System.Drawing.Size(367, 266);
+            this.Controls.Add(this.button_supprimer);
             this.Controls.Add(this.button_contact);
             this.Controls.Add(this.button_adresse);
             this.Controls.Add(this.liste1);
@@ -129,5 +141,6 @@
         private System.Windows.Forms.DataGridView liste1;
         private System.Windows.Forms.Button button_adresse;
         private System.Windows.Forms.Button button_contact;
+        private System.Windows.Forms.Button button_supprimer;
     }
 }

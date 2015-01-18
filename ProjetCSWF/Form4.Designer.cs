@@ -32,6 +32,8 @@
             this.button_Valider = new System.Windows.Forms.Button();
             this.button_Ajouter = new System.Windows.Forms.Button();
             this.liste1 = new System.Windows.Forms.DataGridView();
+            this.button_supprimer = new System.Windows.Forms.Button();
+            this.button_editerfiche = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.liste1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,12 +79,34 @@
             this.liste1.Size = new System.Drawing.Size(332, 154);
             this.liste1.TabIndex = 8;
             // 
+            // button_supprimer
+            // 
+            this.button_supprimer.Location = new System.Drawing.Point(26, 240);
+            this.button_supprimer.Name = "button_supprimer";
+            this.button_supprimer.Size = new System.Drawing.Size(75, 23);
+            this.button_supprimer.TabIndex = 9;
+            this.button_supprimer.Text = "Supprimer";
+            this.button_supprimer.UseVisualStyleBackColor = true;
+            this.button_supprimer.Click += new System.EventHandler(this.button_supprimer_Click);
+            // 
+            // button_editerfiche
+            // 
+            this.button_editerfiche.Location = new System.Drawing.Point(275, 240);
+            this.button_editerfiche.Name = "button_editerfiche";
+            this.button_editerfiche.Size = new System.Drawing.Size(83, 35);
+            this.button_editerfiche.TabIndex = 10;
+            this.button_editerfiche.Text = "Editer la fiche de suivi";
+            this.button_editerfiche.UseVisualStyleBackColor = true;
+            this.button_editerfiche.Click += new System.EventHandler(this.button_editerfiche_Click);
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(367, 249);
+            this.ClientSize = new System.Drawing.Size(367, 298);
+            this.Controls.Add(this.button_editerfiche);
+            this.Controls.Add(this.button_supprimer);
             this.Controls.Add(this.button_Valider);
             this.Controls.Add(this.button_Ajouter);
             this.Controls.Add(this.label1);
@@ -101,5 +125,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button_Ajouter;
         private System.Windows.Forms.Button button_Valider;
+        private System.Windows.Forms.Button button_supprimer;
+        private System.Windows.Forms.Button button_editerfiche;
     }
 }

@@ -24,11 +24,11 @@ namespace ProjetCSWF
         {
             this.entreprises = entreprises;
             InitializeComponent();
+            
             liste1.Columns.Add("Nom", "Nom");
             liste1.Columns.Add("Adresse", "Adresse");
             liste1.Columns.Add("N°Siret", "N°Siret");
             liste1.Columns.Add("Contact", "Contact");
-
             int cpt = 0;
             foreach (Entreprise i in entreprises.liste)
             {
@@ -72,6 +72,36 @@ namespace ProjetCSWF
         {
             f3cont = new Form3_Contact();
             f3cont.Show();
+        }
+
+        private void button_supprimer_Click(object sender, EventArgs e)
+        {
+           // MessageBox.Show("Etes-vous sur de vouloir supprimer ?", "Supprimer", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+            if (MessageBox.Show("Etes-vous sur de vouloir supprimer ?", "Supprimer", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                int index_supp = liste1.CurrentRow.Index;
+                int cpt = 0;
+                foreach (Entreprise i in entreprises.liste)
+                {
+                    if (cpt == index_supp)
+                    {
+                        entreprises.liste.Remove(i);
+                        liste1.Rows.Clear();
+                        int cpt1 = 0;
+                        foreach (Entreprise i2 in entreprises.liste)
+                        {
+                            liste1.Rows.Add(i2.nom, i2.adresse, i2.n_siret, i2.contact.nom);
+                            liste1.Rows[cpt1].HeaderCell.Value = (cpt1 + 1).ToString();
+                            cpt1++;
+                        }
+
+                        return;
+                    }
+                    cpt++;
+
+                }
+            }
+           
         }  
 
 
