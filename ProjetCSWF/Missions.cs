@@ -8,7 +8,7 @@ using System.IO;
 
 namespace ProjetCSWF
 {
-    class Missions
+    public class Missions
     {
         public List<Mission> liste { get; set; }
 
@@ -47,18 +47,172 @@ namespace ProjetCSWF
         {
             XmlSerializer reader = new XmlSerializer(typeof(List<Mission>));
             var directory = Environment.CurrentDirectory + "//data/";
-            StreamReader file = new StreamReader(directory + "/missions.xml");
-            List<Mission> missions = new List<Mission>();
+            
             try
             {
+                StreamReader file = new StreamReader(directory + "/missions.xml");
+                List<Mission> missions = new List<Mission>();
                 this.liste = (List<Mission>)reader.Deserialize(file);
+
+                file.Close();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.GetBaseException());
+                return;
+            }
+        }
+
+        // Recherche
+        // Selon titre de la mission, et nom de l'entreprise
+        public Missions search(string critere)
+        {
+            Missions trouvailles = new Missions();
+            critere = critere.ToLower();
+
+            // Query Creation
+            var missionQuery =
+                from mission in this.liste
+                where mission.titre.ToLower() == critere || mission.entreprise.nom.ToLower() == critere                    
+                select mission;
+
+            // Query execution
+            foreach (Mission mission in missionQuery)
+            {
+                trouvailles.liste.Add(mission);
+                Console.WriteLine(mission);
             }
 
-            file.Close();
+            return trouvailles;
+        }
+
+        // Selon interimaire (nom, prenom ou les deux)
+        public Missions searchInterim(string critere)
+        {
+            Missions trouvailles = new Missions();
+            critere = critere.ToLower();
+
+            // Query Creation
+            var missionQuery =
+                from mission in this.liste
+                where mission.interimaire != null &&
+                    (mission.interimaire.nom.ToLower() == critere || mission.interimaire.prenom.ToLower() == critere ||
+                    (mission.interimaire.nom.ToLower() + " " + mission.interimaire.prenom.ToLower()) == critere ||
+                    (mission.interimaire.prenom.ToLower() + " " + mission.interimaire.nom.ToLower()) == critere)
+                select mission;
+
+            // Query execution
+            foreach (Mission mission in missionQuery)
+            {
+                trouvailles.liste.Add(mission);
+                Console.WriteLine(mission);
+            }
+
+            return trouvailles;
+        }
+
+        // Selon interimaire (objet)
+        public Missions searchInterim(EmployeInterim interimaire)
+        {
+            Missions trouvailles = new Missions();
+
+            // Query Creation
+            var missionQuery =
+                from mission in this.liste
+                where mission.interimaire != null && mission.interimaire == interimaire
+                select mission;
+
+            // Query execution
+            foreach (Mission mission in missionQuery)
+            {
+                trouvailles.liste.Add(mission);
+                Console.WriteLine(mission);
+            }
+
+            return trouvailles;
+        }
+
+        // Missions qui n'ont pas d'intérimaires
+        public Missions searchNoInterim()
+        {
+            Missions trouvailles = new Missions();
+
+            // Query Creation
+            var missionQuery =
+                from mission in this.liste
+                where mission.interimaire == null
+                select mission;
+
+            // Query execution
+            foreach (Mission mission in missionQuery)
+            {
+                trouvailles.liste.Add(mission);
+                Console.WriteLine(mission);
+            }
+
+            return trouvailles;
+        }
+
+        // Missions qui n'ont pas d'intérimaires et avec un critère
+        public Missions searchNoInterim(string critere)
+        {
+            Missions trouvailles = new Missions();
+            critere = critere.ToLower();
+
+            // Query Creation
+            var missionQuery =
+                from mission in this.liste
+                where mission.interimaire == null &&
+                    (mission.interimaire.nom.ToLower() == critere || mission.interimaire.prenom.ToLower() == critere ||
+                    (mission.interimaire.nom.ToLower() + " " + mission.interimaire.prenom.ToLower()) == critere ||
+                    (mission.interimaire.prenom.ToLower() + " " + mission.interimaire.nom.ToLower()) == critere)
+                select mission;
+
+            // Query execution
+            foreach (Mission mission in missionQuery)
+            {
+                trouvailles.liste.Add(mission);
+                Console.WriteLine(mission);
+            }
+
+            return trouvailles;
+        }
+
+        // Missions avec risque de retard > valeur entrée (25% par exemple)
+        public Missions searchRisqueGT(int risque)
+        {
+            Missions trouvailles = new Missions();
+
+            // Query Creation
+            var missionQuery =
+                from mission in this.liste
+                where mission.interimaire != null && mission.Risque >= risque
+                select mission;
+
+            // Query execution
+            foreach (Mission mission in missionQuery)
+            {
+                trouvailles.liste.Add(mission);
+                Console.WriteLine(mission);
+            }
+
+            return trouvailles;
+        }
+
+        // Lister
+        public void show()
+        {
+            // Query Creation
+            var missionQuery =
+                from mission in this.liste
+                select mission;
+
+            // Query execution
+            foreach (Mission mission in missionQuery)
+            {
+                // Affichage dans form ?
+                Console.WriteLine(mission);
+            }
         }
     }
 }

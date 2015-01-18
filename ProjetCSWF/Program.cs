@@ -25,24 +25,6 @@ namespace ProjetCSWF
             entreprises.readXML();
             missions.readXML();
 
-            // Test
-
-            /*
-             * !!! Ne pas décommenter au risque de les voir s'ajouter à la BDD tout le temps !!!
-             * 
-            interimaires.Add(new EmployeInterim("Doe", "John", "0689857898", 25));
-            interimaires[0].addCompetences("Cablage électrique", 2);
-            interimaires.Add(new EmployeInterim("Smith", "Charles", "0778983545", 28));
-            interimaires[1].addCompetences("Cablage électrique", 3);
-
-            entreprises.Add(new Entreprise("Orange", new Adresse("France", "Paris", "78 Rue Olivier De Serres", "75015"),
-                "38012986646850", new Contact("Sanchez", "Emilia", "0778987898")));
-
-            missions.Add(new Mission("Maintenance du parc informatique", entreprises[0], new DateTime(2015, 01, 20), new DateTime(2015, 02, 20)));
-            */
-
-            // Traitement
-
             // Recherche
 
             // Test Chercher John et sa compétence de cablage électrique
@@ -57,6 +39,41 @@ namespace ProjetCSWF
             Console.WriteLine("\nTest 3 : ");
             interimaires.searchComp("Cablage électrique", 3);
 
+            // Tests chercher un mec nommer "Charles Smith" puis "Doe John"
+            Console.WriteLine("\nTest 4 : ");
+            interimaires.search("charles Smith");
+            Console.WriteLine("\nTest 5 : ");
+            interimaires.search("Doe john");
+
+            // Test selon l'age 25 ans
+            Console.WriteLine("\nTest 6 : ");
+            interimaires.search("25");
+
+            // Test entreprise nom puis contact
+            Console.WriteLine("\nTest 7 : ");
+            entreprises.search("Orange");
+            Console.WriteLine("\nTest 8 : ");
+            entreprises.search("Emilia Sanchez");
+
+            // Test missions titre puis interimaire
+            Console.WriteLine("\nTest 9 : ");
+            missions.search("maintenance du parc informatique");
+            Console.WriteLine("\nTest 10 : ");
+            missions.searchInterim("john doe");
+            
+            // Test missions sans interimaire
+            Console.WriteLine("\nTest 11 : ");
+            missions.searchNoInterim();
+
+            // Test missions d'un interimaire objet
+            Console.WriteLine("\nTest 12 : ");
+            missions.searchInterim(interimaires.search("asami yamada").liste[0]);
+
+            // Test embaucher 
+            Console.WriteLine("\nTest 13 : ");
+            missions.search("balayage des toilettes").liste[0].embaucher(missions, interimaires.search("asami yamada").liste[0]);
+
+            // Interface Graphique
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1(interimaires));

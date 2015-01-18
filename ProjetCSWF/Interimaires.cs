@@ -47,30 +47,37 @@ namespace ProjetCSWF
         {
             XmlSerializer reader = new XmlSerializer(typeof(List<EmployeInterim>));
             var directory = Environment.CurrentDirectory + "//data/";
-            StreamReader file = new StreamReader(directory + "/interimaires.xml");
-            List<EmployeInterim> interimaires = new List<EmployeInterim>();
+            
             try
             {
+                StreamReader file = new StreamReader(directory + "/interimaires.xml");
+                List<EmployeInterim> interimaires = new List<EmployeInterim>();
                 this.liste = (List<EmployeInterim>)reader.Deserialize(file);
+
+                file.Close();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.GetBaseException());
-            }
-
-            file.Close();
+                return;
+            }  
         }
 
         // Recherche
-        // Selon nom/prenom
+        // Selon nom/prenom/age
         public Interimaires search(string critere)
         {
             Interimaires trouvailles = new Interimaires();
-
+            critere = critere.ToLower();
             // Query Creation
             var interimQuery =
                 from interim in this.liste
-                where interim.nom == critere || interim.prenom == critere
+                where interim.nom.ToLower() == critere ||
+                    interim.prenom.ToLower() == critere ||
+                    (interim.nom.ToLower() + " " + interim.prenom.ToLower()) == critere ||
+                    (interim.prenom.ToLower() + " " + interim.nom.ToLower()) == critere ||
+                    interim.age.ToString() == critere ||
+                    interim.n_telephone.ToLower() == critere
                 select interim;
 
             // Query execution
@@ -88,17 +95,27 @@ namespace ProjetCSWF
         {
             Interimaires trouvailles = new Interimaires();
             Competence compCorres = new Competence();
+            intitule = intitule.ToLower();
 
             // Recherche de la competence
             foreach (EmployeInterim interim in this.liste)
             {
-                compCorres = interim.search(intitule, niveau);
-                if (compCorres.intitule == intitule && compCorres.Niveau == niveau )
+                try
                 {
-                    trouvailles.liste.Add(interim);
-                    Console.WriteLine(interim);
-                    Console.WriteLine(interim.search(intitule, niveau));
+
+                    compCorres = interim.search(intitule, niveau);
+                    if (compCorres.intitule != null && compCorres.intitule.ToLower() == intitule && compCorres.Niveau == niveau)
+                    {
+                        trouvailles.liste.Add(interim);
+                        Console.WriteLine(interim);
+                        Console.WriteLine(interim.search(intitule, niveau));
+                    }
                 }
+                catch (Exception ex)
+                {
+                   Console.WriteLine(ex);
+                }
+                
             }
 
             return trouvailles;
@@ -109,12 +126,13 @@ namespace ProjetCSWF
         {
             Interimaires trouvailles = new Interimaires();
             Competence compCorres = new Competence();
+            intitule = intitule.ToLower();
 
             // Recherche de la competence
             foreach (EmployeInterim interim in this.liste)
             {
                 compCorres = interim.search(intitule);
-                if (compCorres.intitule == intitule)
+                if (compCorres.intitule != null && compCorres.intitule.ToLower() == intitule)
                 {
                     trouvailles.liste.Add(interim);
                     Console.WriteLine(interim);
@@ -123,6 +141,22 @@ namespace ProjetCSWF
             }
 
             return trouvailles;
+        }
+
+        // Lister
+        public void show()
+        {
+            // Query Creation
+            var interimQuery =
+                from interim in this.liste
+                select interim;
+
+            // Query execution
+            foreach (EmployeInterim interim in interimQuery)
+            {
+                // Affichage dans form ?
+                Console.WriteLine(interim);
+            }
         }
     }
 }

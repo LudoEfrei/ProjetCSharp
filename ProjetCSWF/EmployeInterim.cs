@@ -26,35 +26,16 @@ namespace ProjetCSWF
         }
 
         // Recherche d'une compétence
-        // Selon intitulé et niveau
-        public Competence search(string intitule, int niveau)
-        {
-            Competence trouvaille = new Competence();
-
-            // Query Creation
-            var compQuery =
-                from comp in this.competences
-                where comp.intitule == intitule && comp.Niveau == niveau
-                select comp;
-
-            // Query execution
-            foreach (Competence comp in compQuery)
-            {
-                trouvaille = comp;
-            }
-                
-            return trouvaille;
-        }
-
         // Selon intitule
         public Competence search(string intitule)
         {
             Competence trouvaille = new Competence();
+            intitule = intitule.ToLower();
 
             // Query Creation
             var compQuery =
                 from comp in this.competences
-                where comp.intitule == intitule
+                where comp.intitule.ToLower() == intitule
                 select comp;
 
             // Query execution
@@ -63,12 +44,94 @@ namespace ProjetCSWF
                 trouvaille = comp;
             }
 
+            return trouvaille;
+        }
+
+        // Selon intitule niveau
+        public Competence search(string intitule, int niveau)
+        {
+            Competence trouvaille = new Competence();
+            intitule = intitule.ToLower();
+
+            var compQuery =
+                from comp in this.competences
+                where comp.intitule.ToLower() == intitule && comp.Niveau == niveau
+                select comp;
+
+            foreach (Competence comp in compQuery)
+            {
+                trouvaille = comp;
+            }
             return trouvaille;
         }
 
         public override string ToString()
         {
             return "Nom : " + nom + "\nPrenom : " + prenom + "\nTelephone : " + n_telephone + "\nAge : " + age + " ans";
+        }
+
+
+        // Surcharge de l'opérateur Equals etc pour operateur ==
+        public override bool Equals(Object obj)
+        {
+            if (obj == null)
+                return false;
+            EmployeInterim p = obj as EmployeInterim;
+            if ((Object)p == null)
+                return false;
+            return nom == p.nom && prenom == p.prenom &&
+                n_telephone == p.n_telephone && age == p.age &&
+                competences == p.competences;
+        }
+
+        public bool Equals(EmployeInterim p)
+        {
+            if ((object)p == null)
+            {
+                return false;
+            }
+
+            return nom == p.nom && prenom == p.prenom &&
+                n_telephone == p.n_telephone && age == p.age &&
+                competences == p.competences;
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
+        public static bool operator ==(EmployeInterim a, EmployeInterim b)
+        {
+            if (Object.ReferenceEquals(a, b))
+                return true;
+            if (((object)a == null) || ((object)b == null))
+                return false;
+            for (int i = 0; i < a.competences.Count; i++)
+            {
+                try 
+                { 
+                if (a.competences[i] != b.competences[i])
+                    return false;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                }
+            }
+            return a.nom == b.nom && a.prenom == b.prenom &&
+                a.n_telephone == b.n_telephone && a.age == b.age;
+        }
+
+        public static bool operator !=(EmployeInterim a, EmployeInterim b)
+        {
+            if (Object.ReferenceEquals(a, b))
+                return false;
+            if (((object)a == null) || ((object)b == null))
+                return true;
+            return a.nom == b.nom || a.prenom == b.prenom ||
+                a.n_telephone == b.n_telephone || a.age == b.age ||
+                a.competences == b.competences;
         }
     }
 }

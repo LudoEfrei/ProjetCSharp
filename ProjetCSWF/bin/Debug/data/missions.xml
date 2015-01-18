@@ -22,4 +22,67 @@
     <Avancement>0</Avancement>
     <Risque>0</Risque>
   </Mission>
+  <Mission>
+    <titre>Cablage Data Center</titre>
+    <entreprise>
+      <nom>Orange</nom>
+      <adresse>
+        <pays>France</pays>
+        <ville>Paris</ville>
+        <rue>78 Rue Olivier De Serres</rue>
+        <CP>75015</CP>
+      </adresse>
+      <n_siret>38012986646850</n_siret>
+      <contact>
+        <nom>Sanchez</nom>
+        <prenom>Emilia</prenom>
+        <n_telephone>0778987898</n_telephone>
+      </contact>
+    </entreprise>
+    <interimaire>
+      <nom>Doe</nom>
+      <prenom>John</prenom>
+      <n_telephone>0689857898</n_telephone>
+      <age>25</age>
+      <competences>
+        <Competence>
+          <intitule>Cablage électrique</intitule>
+          <Niveau>2</Niveau>
+        </Competence>
+      </competences>
+    </interimaire>
+    <debut>2015-01-20T00:00:00</debut>
+    <fin>2015-02-20T00:00:00</fin>
+    <Avancement>0</Avancement>
+    <Risque>0</Risque>
+  </Mission>
+  <Mission>
+    <titre>Balayage des toilettes</titre>
+    <entreprise>
+      <nom>Orange</nom>
+      <adresse>
+        <pays>France</pays>
+        <ville>Paris</ville>
+        <rue>78 Rue Olivier De Serres</rue>
+        <CP>75015</CP>
+      </adresse>
+      <n_siret>38012986646850</n_siret>
+      <contact>
+        <nom>Sanchez</nom>
+        <prenom>Emilia</prenom>
+        <n_telephone>0778987898</n_telephone>
+      </contact>
+    </entreprise>
+    <interimaire>
+      <nom>Yamada</nom>
+      <prenom>Asami</prenom>
+      <n_telephone>0772989545</n_telephone>
+      <age>23</age>
+      <competences />
+    </interimaire>
+    <debut>2015-03-01T00:00:00</debut>
+    <fin>2016-03-01T00:00:00</fin>
+    <Avancement>0</Avancement>
+    <Risque>0</Risque>
+  </Mission>
 </ArrayOfMission>

@@ -24,4 +24,11 @@
       </Competence>
     </competences>
   </EmployeInterim>
+  <EmployeInterim>
+    <nom>Yamada</nom>
+    <prenom>Asami</prenom>
+    <n_telephone>0772989545</n_telephone>
+    <age>23</age>
+    <competences />
+  </EmployeInterim>
 </ArrayOfEmployeInterim>

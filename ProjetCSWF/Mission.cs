@@ -35,7 +35,6 @@ namespace ProjetCSWF
         {
             this.titre = titre;
             this.entreprise = entreprise;
-            //this.interimaire = new EmployeInterim("null", "null", "null", -1);
             this.debut = debut;
             this.fin = fin;
             this.avancement = 0;
@@ -64,9 +63,33 @@ namespace ProjetCSWF
             }
         }
 
+        //Interimaire qui ne doit pas avoir une autre mission dont la date de fin > date de début d'une autre
+        public void embaucher(Missions missions, EmployeInterim interimaire)
+        {
+            bool dejaPris = false;
+            Missions autresMissions = missions.searchInterim(interimaire);
+
+            foreach (Mission mission in autresMissions.liste)
+            {
+                Console.WriteLine(this.debut);
+                Console.WriteLine(fin);
+                if (fin >= this.debut) dejaPris = true;
+            }
+            
+            if (dejaPris == true)
+            {
+                Console.WriteLine("Impossible d'embaucher cet intérimaire pour cette mission, une autre mission interfère.");
+            }
+            else
+            {
+                this.interimaire = interimaire;
+            }
+
+        }
+
         public override string ToString()
         {
-            return "Titre : " + titre + "\nEntreprise : " + entreprise + "\n Interimaire : \n" + interimaire +
+            return "Titre : " + titre + "\nEntreprise : " + entreprise + "\nInterimaire : \n" + interimaire +
                 "\nDate de debut : " + debut + "\nDate de fin : " + fin + "\nAvancement : " + avancement + "\nRisque : " + risque;
         }
 
