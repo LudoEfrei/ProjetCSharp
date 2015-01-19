@@ -30,8 +30,6 @@ namespace ProjetCSWF
                 liste1.Rows[cpt].HeaderCell.Value = (cpt + 1).ToString();
                 cpt++;
             }
-            button_valider.Hide();
-
         }
 
         private void button_ajouter_Click(object sender, EventArgs e)
@@ -46,13 +44,90 @@ namespace ProjetCSWF
             liste1.AllowUserToAddRows = false;
             liste1.ReadOnly = true;
             int i = liste1.RowCount;
-            string nom = liste1.Rows[i-1].Cells[0].Value.ToString();
-            string prenom = liste1.Rows[i - 1].Cells[1].Value.ToString();
-            string n_telephone = liste1.Rows[i - 1].Cells[2].Value.ToString();
-            int age = Int32.Parse(liste1.Rows[i - 1].Cells[3].Value.ToString());
-            EmployeInterim nouveau_empl=(new EmployeInterim(nom,prenom,n_telephone,age));
-            interimaires.liste.Add(nouveau_empl);
+
+            try
+            {
+                if (liste1.Rows[i - 1].Cells[0].Value == null || liste1.Rows[i - 1].Cells[1].Value == null ||
+                liste1.Rows[i - 1].Cells[2].Value == null || liste1.Rows[i - 1].Cells[3].Value == null ||
+                liste1.Rows[i].Cells[0].Value == null || liste1.Rows[i].Cells[1].Value == null ||
+                liste1.Rows[i].Cells[2].Value == null || liste1.Rows[i].Cells[3].Value == null)
+                {
+                    MessageBox.Show(
+                        "Saisie incomplète");
+                }
+                else
+                {
+                    string nom = liste1.Rows[i - 1].Cells[0].Value.ToString();
+                    string prenom = liste1.Rows[i - 1].Cells[1].Value.ToString();
+                    string n_telephone = liste1.Rows[i - 1].Cells[2].Value.ToString();
+                    int age = Int32.Parse(liste1.Rows[i - 1].Cells[3].Value.ToString());
+                    EmployeInterim nouveau_empl = (new EmployeInterim(nom, prenom, n_telephone, age));
+                    interimaires.liste.Add(nouveau_empl);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                MessageBox.Show(
+                        "Saisie incomplète");
+            }
+            
+
+            // Refresh
+            liste1.Rows.Clear();
+
+            int cpt = 0;
+            foreach (EmployeInterim interim in interimaires.liste)
+            {
+                liste1.Rows.Add(interim.nom, interim.prenom, interim.n_telephone, interim.age, interim.listComp());
+                liste1.Rows[cpt].HeaderCell.Value = (cpt + 1).ToString();
+                cpt++;
+            }
+
+            button_valider.Hide();
         }
+
+        private void textBox_rechercher_TextChanged(object sender, EventArgs e)
+        {
+            liste1.Rows.Clear();
+            if (textBox_rechercher.Text == "")
+            {
+                int cpt = 0;
+                foreach (EmployeInterim i in interimaires.liste)
+                {
+                    liste1.Rows.Add(i.nom, i.prenom, i.n_telephone, i.age, i.listComp());
+                    liste1.Rows[cpt].HeaderCell.Value = (cpt + 1).ToString();
+                    cpt++;
+                }
+            }
+            else
+            {
+                if (checkBox_competences.Checked == true)
+                {
+                    Interimaires trouvailles = interimaires.searchComp(textBox_rechercher.Text);
+                    int cpt = 0;
+                    foreach (EmployeInterim i in trouvailles.liste)
+                    {
+                        liste1.Rows.Add(i.nom, i.prenom, i.n_telephone, i.age, i.listComp());
+                        liste1.Rows[cpt].HeaderCell.Value = (cpt + 1).ToString();
+                        cpt++;
+                    }
+                }
+                else
+                {
+                    Interimaires trouvailles = interimaires.search(textBox_rechercher.Text);
+                    int cpt = 0;
+                    foreach (EmployeInterim i in trouvailles.liste)
+                    {
+                        liste1.Rows.Add(i.nom, i.prenom, i.n_telephone, i.age, i.listComp());
+                        liste1.Rows[cpt].HeaderCell.Value = (cpt + 1).ToString();
+                        cpt++;
+                    }
+                }
+            }
+        }
+
+        // Plus
 
         private void button_supprimer_Click(object sender, EventArgs e)
         {
@@ -81,10 +156,12 @@ namespace ProjetCSWF
 
                 }
             }
-           
+
         }
-            
 
-
+        private void checkBox_competences_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox_rechercher_TextChanged(sender, e);
+        }
     }
 }

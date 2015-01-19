@@ -20,12 +20,14 @@ namespace ProjetCSWF
         public DateTime fin;
         public Entreprises entreprises;
         public Interimaires interimaires;
+        public Missions missions;
 
-        public Form4_addMiss(Entreprises entreprises, Interimaires interimaires)
+        public Form4_addMiss(Entreprises entreprises, Interimaires interimaires, Missions missions)
         {
             InitializeComponent();
             this.entreprises = entreprises;
             this.interimaires = interimaires;
+            this.missions = missions;
             liste_ent.Columns.Add("Nom", "Nom");
 
             int cpt = 0;
@@ -69,7 +71,22 @@ namespace ProjetCSWF
             }
             debut = dateTimePicker1.Value;
             fin = dateTimePicker2.Value;
-            this.Close();
+
+            Mission missionTest = new Mission(titre, entreprise, interimaire, debut, fin);
+
+            if (missionTest.embaucher(missions, interimaire)) 
+            {
+                this.Close();
+            }  
+            else
+            {
+                MessageBox.Show(
+                    "L'intérimaire est déjà pris pour ces dates là.",
+                    "Erreur, intérimaire indisponible",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                    );
+            }
         }
         public Mission getMission()
         {

@@ -132,6 +132,7 @@ namespace ProjetCSWF
             return trouvailles;
         }
 
+        /*
         // Missions qui n'ont pas d'intérimaires
         public Missions searchNoInterim()
         {
@@ -152,6 +153,7 @@ namespace ProjetCSWF
 
             return trouvailles;
         }
+        
 
         // Missions qui n'ont pas d'intérimaires et avec un critère
         public Missions searchNoInterim(string critere)
@@ -177,6 +179,7 @@ namespace ProjetCSWF
 
             return trouvailles;
         }
+        */
 
         // Missions avec risque de retard > valeur entrée (25% par exemple)
         public Missions searchRisqueGT(int risque)

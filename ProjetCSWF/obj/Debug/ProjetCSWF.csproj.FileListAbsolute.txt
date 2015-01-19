@@ -40,3 +40,43 @@ C:\Users\Utilisateur\Documents\GitHub\ProjetCSharp\ProjetCSharp\ProjetCSWF\obj\D
 C:\Users\Utilisateur\Documents\GitHub\ProjetCSharp\ProjetCSharp\ProjetCSWF\obj\Debug\ProjetCSWF.Form4.resources
 C:\Users\Utilisateur\Documents\GitHub\ProjetCSharp\ProjetCSharp\ProjetCSWF\obj\Debug\ProjetCSWF.Form3_Adresse.resources
 C:\Users\Utilisateur\Documents\GitHub\ProjetCSharp\ProjetCSharp\ProjetCSWF\obj\Debug\ProjetCSWF.Form3_Contact.resources
+C:\Users\Kevin\Documents\GitHub\ProjetCSharp\ProjetCSWF\obj\Debug\ProjetCSWF.Form3.resources
+C:\Users\Kevin\Documents\GitHub\ProjetCSharp\ProjetCSWF\obj\Debug\ProjetCSWF.Form3_Adresse.resources
+C:\Users\Kevin\Documents\GitHub\ProjetCSharp\ProjetCSWF\obj\Debug\ProjetCSWF.Form3_Contact.resources
+C:\Users\Kevin\Documents\GitHub\ProjetCSharp\ProjetCSWF\obj\Debug\ProjetCSWF.Form4.resources
+C:\Users\Kevin\Documents\GitHub\ProjetCSharp\ProjetCSWF\obj\Debug\ProjetCSWF.Form4_Avancements.resources
+C:\Users\Kevin\Documents\GitHub\ProjetCSharp\ProjetCSWF\obj\Debug\ProjetCSWF.Form4_Facturer.resources
+C:\Users\Kevin\Desktop\ProjetCSharptmp last\ProjetCSWF\bin\Debug\ProjetCSWF.exe.config
+C:\Users\Kevin\Desktop\ProjetCSharptmp last\ProjetCSWF\obj\Debug\ProjetCSWF.exe
+C:\Users\Kevin\Desktop\ProjetCSharptmp last\ProjetCSWF\obj\Debug\ProjetCSWF.pdb
+C:\Users\Kevin\Desktop\ProjetCSharptmp last\ProjetCSWF\bin\Debug\ProjetCSWF.exe
+C:\Users\Kevin\Desktop\ProjetCSharptmp last\ProjetCSWF\bin\Debug\ProjetCSWF.pdb
+C:\Users\Kevin\Desktop\ProjetCSharptmp last\ProjetCSWF\obj\Debug\ProjetCSWF.csprojResolveAssemblyReference.cache
+C:\Users\Kevin\Desktop\ProjetCSharptmp last\ProjetCSWF\obj\Debug\ProjetCSWF.Form1.resources
+C:\Users\Kevin\Desktop\ProjetCSharptmp last\ProjetCSWF\obj\Debug\ProjetCSWF.Form2.resources
+C:\Users\Kevin\Desktop\ProjetCSharptmp last\ProjetCSWF\obj\Debug\ProjetCSWF.Form3.resources
+C:\Users\Kevin\Desktop\ProjetCSharptmp last\ProjetCSWF\obj\Debug\ProjetCSWF.Form3_Adresse.resources
+C:\Users\Kevin\Desktop\ProjetCSharptmp last\ProjetCSWF\obj\Debug\ProjetCSWF.Form3_Contact.resources
+C:\Users\Kevin\Desktop\ProjetCSharptmp last\ProjetCSWF\obj\Debug\ProjetCSWF.Form4.resources
+C:\Users\Kevin\Desktop\ProjetCSharptmp last\ProjetCSWF\obj\Debug\ProjetCSWF.Form4_Avancements.resources
+C:\Users\Kevin\Desktop\ProjetCSharptmp last\ProjetCSWF\obj\Debug\ProjetCSWF.Form4_Facturer.resources
+C:\Users\Kevin\Desktop\ProjetCSharptmp last\ProjetCSWF\obj\Debug\ProjetCSWF.Properties.Resources.resources
+C:\Users\Kevin\Desktop\ProjetCSharptmp last\ProjetCSWF\obj\Debug\ProjetCSWF.csproj.GenerateResource.Cache
+C:\Users\Kevin\Desktop\ProjetCSharp_01\ProjetCSWF\bin\Debug\ProjetCSWF.exe.config
+C:\Users\Kevin\Desktop\ProjetCSharp_01\ProjetCSWF\obj\Debug\ProjetCSWF.exe
+C:\Users\Kevin\Desktop\ProjetCSharp_01\ProjetCSWF\obj\Debug\ProjetCSWF.pdb
+C:\Users\Kevin\Desktop\ProjetCSharp_01\ProjetCSWF\bin\Debug\ProjetCSWF.exe
+C:\Users\Kevin\Desktop\ProjetCSharp_01\ProjetCSWF\bin\Debug\ProjetCSWF.pdb
+C:\Users\Kevin\Desktop\ProjetCSharp_01\ProjetCSWF\obj\Debug\ProjetCSWF.csprojResolveAssemblyReference.cache
+C:\Users\Kevin\Desktop\ProjetCSharp_01\ProjetCSWF\obj\Debug\ProjetCSWF.Form1.resources
+C:\Users\Kevin\Desktop\ProjetCSharp_01\ProjetCSWF\obj\Debug\ProjetCSWF.Form2.resources
+C:\Users\Kevin\Desktop\ProjetCSharp_01\ProjetCSWF\obj\Debug\ProjetCSWF.Form3.resources
+C:\Users\Kevin\Desktop\ProjetCSharp_01\ProjetCSWF\obj\Debug\ProjetCSWF.Form3_Adresse.resources
+C:\Users\Kevin\Desktop\ProjetCSharp_01\ProjetCSWF\obj\Debug\ProjetCSWF.Form3_Contact.resources
+C:\Users\Kevin\Desktop\ProjetCSharp_01\ProjetCSWF\obj\Debug\ProjetCSWF.Form4.resources
+C:\Users\Kevin\Desktop\ProjetCSharp_01\ProjetCSWF\obj\Debug\ProjetCSWF.Form4_Avancements.resources
+C:\Users\Kevin\Desktop\ProjetCSharp_01\ProjetCSWF\obj\Debug\ProjetCSWF.Form4_Facturer.resources
+C:\Users\Kevin\Desktop\ProjetCSharp_01\ProjetCSWF\obj\Debug\ProjetCSWF.Properties.Resources.resources
+C:\Users\Kevin\Desktop\ProjetCSharp_01\ProjetCSWF\obj\Debug\ProjetCSWF.csproj.GenerateResource.Cache
+C:\Users\Kevin\Desktop\ProjetCSharp_01\ProjetCSWF\obj\Debug\ProjetCSWF.Form4_addMiss.resources
+C:\Users\Kevin\Desktop\ProjetCSharp_01\ProjetCSWF\obj\Debug\ProjetCSWF.Form4_Avancement.resources

@@ -30,7 +30,6 @@
         {
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.button_Ok = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
@@ -56,16 +55,7 @@
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(35, 20);
             this.numericUpDown1.TabIndex = 1;
-            // 
-            // button_Ok
-            // 
-            this.button_Ok.Location = new System.Drawing.Point(61, 74);
-            this.button_Ok.Name = "button_Ok";
-            this.button_Ok.Size = new System.Drawing.Size(45, 23);
-            this.button_Ok.TabIndex = 2;
-            this.button_Ok.Text = "Ok";
-            this.button_Ok.UseVisualStyleBackColor = true;
-            this.button_Ok.Click += new System.EventHandler(this.button_Ok_Click);
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // dateTimePicker1
             // 
@@ -77,7 +67,6 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.button_Ok);
             this.groupBox1.Controls.Add(this.numericUpDown1);
             this.groupBox1.Controls.Add(this.progressBar1);
             this.groupBox1.Location = new System.Drawing.Point(4, 2);
@@ -148,7 +137,6 @@
 
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Button button_Ok;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.NumericUpDown numericUpDown3;

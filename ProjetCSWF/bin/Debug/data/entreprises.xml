@@ -45,4 +45,109 @@
       <n_telephone>0656897454</n_telephone>
     </contact>
   </Entreprise>
+  <Entreprise>
+    <nom>Swalak</nom>
+    <adresse>
+      <pays>France</pays>
+      <ville>Grenoble</ville>
+      <rue>41 impasse pruot</rue>
+      <CP>38000</CP>
+    </adresse>
+    <n_siret>78945613654979</n_siret>
+    <contact>
+      <nom>Vol</nom>
+      <prenom>Gwen</prenom>
+      <n_telephone>0898785465</n_telephone>
+    </contact>
+  </Entreprise>
+  <Entreprise>
+    <nom>Maldorf</nom>
+    <adresse>
+      <pays>France</pays>
+      <ville>Nabeulbeuk</ville>
+      <rue>987 Jean Gabriel</rue>
+      <CP>96987</CP>
+    </adresse>
+    <n_siret>12345678910112</n_siret>
+    <contact>
+      <nom>Losprout</nom>
+      <prenom>Pret</prenom>
+      <n_telephone>9874563241</n_telephone>
+    </contact>
+  </Entreprise>
+  <Entreprise>
+    <nom>Samsung C &amp; T France</nom>
+    <adresse>
+      <pays>France</pays>
+      <ville>Paris</ville>
+      <rue>Avenue du maine</rue>
+      <CP>75755</CP>
+    </adresse>
+    <n_siret>31217970800010</n_siret>
+    <contact>
+      <nom>Kim</nom>
+      <prenom>Jun</prenom>
+      <n_telephone>789987456</n_telephone>
+    </contact>
+  </Entreprise>
+  <Entreprise>
+    <nom>Carrefour</nom>
+    <adresse>
+      <pays>France</pays>
+      <ville>Ste Marie</ville>
+      <rue>8 A HUIT, Quartier Perou</rue>
+      <CP>97230</CP>
+    </adresse>
+    <n_siret>40422352100018</n_siret>
+    <contact>
+      <nom>Mae</nom>
+      <prenom>Emanuel</prenom>
+      <n_telephone>089874532</n_telephone>
+    </contact>
+  </Entreprise>
+  <Entreprise>
+    <nom>Monsieur Amar Kouba</nom>
+    <adresse>
+      <pays>France</pays>
+      <ville>Perpignan</ville>
+      <rue>192 Avenue Marechal Joffre</rue>
+      <CP>66000</CP>
+    </adresse>
+    <n_siret>52231788200010</n_siret>
+    <contact>
+      <nom>Amar</nom>
+      <prenom>Kouba</prenom>
+      <n_telephone>0165789845</n_telephone>
+    </contact>
+  </Entreprise>
+  <Entreprise>
+    <nom>Plot</nom>
+    <adresse>
+      <pays>France</pays>
+      <ville>Le Cannet</ville>
+      <rue>40 Avenue Victoria Vila Nikko</rue>
+      <CP>06110</CP>
+    </adresse>
+    <n_siret>42003766500015</n_siret>
+    <contact>
+      <nom>Sandberg</nom>
+      <prenom>Jonkheer</prenom>
+      <n_telephone>0978984565</n_telephone>
+    </contact>
+  </Entreprise>
+  <Entreprise>
+    <nom>F.A.T.</nom>
+    <adresse>
+      <pays>France</pays>
+      <ville>Bondues</ville>
+      <rue>27 Rue Henri Dunant</rue>
+      <CP>59910</CP>
+    </adresse>
+    <n_siret>42868871700019</n_siret>
+    <contact>
+      <nom>Catry</nom>
+      <prenom>Jean</prenom>
+      <n_telephone>059878463</n_telephone>
+    </contact>
+  </Entreprise>
 </ArrayOfEntreprise>

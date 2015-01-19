@@ -24,11 +24,11 @@ namespace ProjetCSWF
         {
             this.entreprises = entreprises;
             InitializeComponent();
-            
             liste1.Columns.Add("Nom", "Nom");
             liste1.Columns.Add("Adresse", "Adresse");
             liste1.Columns.Add("N°Siret", "N°Siret");
             liste1.Columns.Add("Contact", "Contact");
+
             int cpt = 0;
             foreach (Entreprise i in entreprises.liste)
             {
@@ -53,13 +53,38 @@ namespace ProjetCSWF
             liste1.AllowUserToAddRows = false;
             liste1.ReadOnly = true;
             int i = liste1.RowCount;
-            nom = liste1.Rows[i-1].Cells[0].Value.ToString();
-            adresse = f3add.getAdresse();
-            n_siret = liste1.Rows[i - 1].Cells[2].Value.ToString();
-            contact = f3cont.getContact();
-            Entreprise nouvelle_ent=(new Entreprise(nom,adresse,n_siret,contact));
-            entreprises.liste.Add(nouvelle_ent);
-            
+
+            if (liste1.Rows[i-1].Cells[0].Value == null || f3add == null ||
+                liste1.Rows[i-1].Cells[2].Value == null || f3cont == null)
+            {
+                MessageBox.Show(
+                    "Saisie incomplète");
+            }
+            else
+            {
+                nom = liste1.Rows[i - 1].Cells[0].Value.ToString();
+                adresse = f3add.getAdresse();
+                n_siret = liste1.Rows[i - 1].Cells[2].Value.ToString();
+                contact = f3cont.getContact();
+                Entreprise nouvelle_ent = (new Entreprise(nom, adresse, n_siret, contact));
+                entreprises.liste.Add(nouvelle_ent);
+            }
+
+            // Refresh
+
+            liste1.Rows.Clear();
+
+            int cpt = 0;
+            foreach (Entreprise interim in entreprises.liste)
+            {
+                liste1.Rows.Add(interim.nom, interim.adresse, interim.n_siret, interim.contact.nom);
+                liste1.Rows[cpt].HeaderCell.Value = (cpt + 1).ToString();
+                cpt++;
+            }
+
+            button_adresse.Hide();
+            button_contact.Hide();
+            button_Valider.Hide();
         }
 
         private void button_adresse_Click(object sender, EventArgs e)
@@ -74,9 +99,42 @@ namespace ProjetCSWF
             f3cont.Show();
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_rechercher_TextChanged(object sender, EventArgs e)
+        {
+            liste1.Rows.Clear();
+            if (textBox_rechercher.Text == "")
+            {
+                int cpt = 0;
+                foreach (Entreprise i in entreprises.liste)
+                {
+                    liste1.Rows.Add(i.nom, i.adresse, i.n_siret, i.contact.nom);
+                    liste1.Rows[cpt].HeaderCell.Value = (cpt + 1).ToString();
+                    cpt++;
+                }
+            }
+            else
+            {
+                Entreprises trouvailles = entreprises.search(textBox_rechercher.Text);
+                int cpt = 0;
+                foreach (Entreprise i in trouvailles.liste)
+                {
+                    liste1.Rows.Add(i.nom, i.adresse, i.n_siret, i.contact.nom);
+                    liste1.Rows[cpt].HeaderCell.Value = (cpt + 1).ToString();
+                    cpt++;
+                }
+            }
+        }
+
+        // Plus
+
         private void button_supprimer_Click(object sender, EventArgs e)
         {
-           // MessageBox.Show("Etes-vous sur de vouloir supprimer ?", "Supprimer", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+            // MessageBox.Show("Etes-vous sur de vouloir supprimer ?", "Supprimer", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
             if (MessageBox.Show("Etes-vous sur de vouloir supprimer ?", "Supprimer", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 int index_supp = liste1.CurrentRow.Index;
@@ -101,7 +159,12 @@ namespace ProjetCSWF
 
                 }
             }
-           
+
+        }
+
+        private void liste1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }  
 
 

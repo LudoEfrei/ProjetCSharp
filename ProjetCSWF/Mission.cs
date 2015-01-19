@@ -55,26 +55,26 @@ namespace ProjetCSWF
         }
 
         //Interimaire qui ne doit pas avoir une autre mission dont la date de fin > date de début d'une autre
-        public void embaucher(Missions missions, EmployeInterim interimaire)
+        public bool embaucher(Missions missions, EmployeInterim interimaire)
         {
-            bool dejaPris = false;
-            Missions autresMissions = missions.searchInterim(interimaire);
+            bool pasPris = true;
+            Missions autresMissions = missions.searchInterim(interimaire.nom + " " + interimaire.prenom);
 
             foreach (Mission mission in autresMissions.liste)
             {
                 Console.WriteLine(this.debut);
                 Console.WriteLine(fin);
-                if (fin >= this.debut) dejaPris = true;
+                pasPris = false;
+                if (fin >= this.debut) 
+                    pasPris = false;
             }
-            
-            if (dejaPris == true)
+
+            if (pasPris == false)
             {
                 Console.WriteLine("Impossible d'embaucher cet intérimaire pour cette mission, une autre mission interfère.");
             }
-            else
-            {
-                this.interimaire = interimaire;
-            }
+
+            return pasPris;
 
         }
 
@@ -97,6 +97,7 @@ namespace ProjetCSWF
             return trouvailles;
         }
 
+        /*
         // Faire une facture
         public void makeFacture()
         {
@@ -126,6 +127,7 @@ namespace ProjetCSWF
                 Console.WriteLine("Salaire : " + salaire + " euros");
             }
         }
+        */
 
         public override string ToString()
         {

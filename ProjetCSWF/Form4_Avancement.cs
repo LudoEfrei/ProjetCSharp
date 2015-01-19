@@ -24,13 +24,10 @@ namespace ProjetCSWF
             this.mission = mission;
             this.liste1 = liste1;
             InitializeComponent();
-        }
-
-        private void button_Ok_Click(object sender, EventArgs e)
-        {
+            numericUpDown1.Value = mission.avancements.Last().Pourcentage;
+            numericUpDown3.Value = mission.Risque;
             progressBar1.Value = (int)numericUpDown1.Value;
             progressBar1.Refresh();
-            this.Refresh();
         }
 
         private void button_valider_Click(object sender, EventArgs e)
@@ -40,6 +37,12 @@ namespace ProjetCSWF
             mission.avancements.Add(avancement);
             liste1.Refresh();
             this.Close();
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            progressBar1.Value = (int)numericUpDown1.Value;
+            progressBar1.Refresh();
         }
     }
 }
