@@ -39,6 +39,7 @@ namespace ProjetCSWF
                 cpt++;
             }
             f4add = new Form4_addMiss(entreprises, interimaires);
+            
 
         }
 
@@ -86,10 +87,19 @@ namespace ProjetCSWF
         }
 
         private void button_editerfiche_Click(object sender, EventArgs e)
-        {
+        {         
             int index_selec = liste1.CurrentRow.Index;
-            f4av = new Form4_Avancement();
-            f4av.Progression(50);
+            
+            int cpt = 0;
+            foreach (Mission i in missions.liste)
+            {
+                if (cpt == index_selec)
+                {
+                    f4av = new Form4_Avancement(i,liste1);
+                }
+                cpt++;
+            }
+  
             f4av.Show();
 
         }
